@@ -5,8 +5,9 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si --needed --noconfirm
 
-# test
+# get out of yay-bin folder and make another folder
+cd ..
 mkdir testfolder2
 
 # install some useful packages
-yay -S nerd-fonts-hack lf-bin librewolf-bin brave-bin downgrade
+yay -S --needed --noconfirm --batchinstall nerd-fonts-hack lf-bin librewolf-bin brave-bin downgrade
