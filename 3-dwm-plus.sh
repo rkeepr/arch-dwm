@@ -22,13 +22,12 @@ git clone https://github.com/torrinfail/dwmblocks.git
 cp config/dwmblocks/blocks.h dwmblocks
 cd "dwmblocks"
 sudo make clean install
-cd..
+cd ..
 
-# make some folders
-mkdir /home/$user/downloads
-mkdir /home/$user/images
-mkdir /home/$user/videos
-# check if ".config" and ".local" directories exist. if not create it
+# check if these folders exist, if not create it
+[ ! -d "/home/$user/downloads" ] && mkdir -p "/home/$user/downloads"
+[ ! -d "/home/$user/images" ] && mkdir -p "/home/$user/images"
+[ ! -d "/home/$user/videos" ] && mkdir -p "/home/$user/videos"
 [ ! -d "/home/$user/.config" ] && mkdir -p "/home/$user/.config"
 [ ! -d "/home/$user/.local" ] && mkdir -p "/home/$user/.local"
 
