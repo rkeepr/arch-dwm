@@ -1,5 +1,7 @@
 #!/bin/sh
 
+user=$(id -u -n 1000)
+
 # dwm
 git clone https://github.com/rkeepr/dwm.git
 cd "dwm"
