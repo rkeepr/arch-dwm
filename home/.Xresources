@@ -1,0 +1,82 @@
+! special
+*.foreground:   #d0d0d0
+*.cursorColor:  #d0d0d0
+*.background:   #111111
+
+! black
+*.color0:       #151515
+*.color8:       #505050
+
+! red
+*.color1:       #F25054
+*.color9:       #F25054
+
+! green
+*.color2:       #4BCC4B
+*.color10:      #4BCC4B
+
+! yellow
+*.color3:       #FFC34C
+*.color11:      #FFC34C
+
+! blue
+*.color4:       #4187CC
+*.color12:      #4187CC
+
+! magenta
+*.color5:       #CF66CF
+*.color13:      #CF66CF
+
+! cyan
+*.color6:       #42CCCC
+*.color14:      #42CCCC
+
+! white
+*.color7:       #d3d0c8
+*.color15:      #f2f0ec
+
+
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.hintstyle: hintfull
+
+!dmenu.font: Hack Nerd Font:style:Regular:pixelsize=15,
+!dmenu.background: #222222
+!dmenu.foreground: #bbbbbb
+!dmenu.selbackground : #005577
+!dmenu.selforeground : #eeeeee
+
+! urxvt options
+URxvt.perl-ext-common: default,matcher
+URxvt.geometry: 100x36
+URxvt.cursorBlink: true
+URxvt.scrollBar: false
+!URxvt.internalBorder: 20
+URxvt.font: \
+	xft:Hack Nerd Font:style:Regular:pixelsize=15, \
+	xft:Source Han Sans:pixelsize=15, \
+	xft:Symbols Nerd Font:style=2048-em \
+URxvt.allow_bold: true
+! true transparency
+URxvt.depth: 32
+URxvt.background: [95]#111111
+! fix scrollback when using a pager
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+!! Common Keybinds for Navigations
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Right: \033[1;5C
+URxvt.keysym.Control-Left: \033[1;5D
+! clickable urls
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+! open last url
+URxvt.keysym.C-Delete: perl:matcher:last
+! list open urls (max 10)
+URxvt.keysym.M-Delete: perl:matcher:list
+! url color
+URxvt.matcher.rend.0: Uline Bold fg5

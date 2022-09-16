@@ -1,0 +1,46 @@
+# wm independent hotkeys
+
+# launch programs
+super + {F1,F2,F3,F4}
+	{dmenu_run,st,brave,st -e ncmpcpp}
+ctrl + {F1,F2,F3,F4}
+	st -e lf {~/,~/downloads,/mnt/storage/music,~/videos}
+
+Print
+	flameshot gui
+
+ctrl + shift + Escape
+	st -e htop
+
+# mpc/audacious control
+super + {F5,F6,F7,F8}
+	mpc {prev,toggle,stop,next}
+#	audtool {playlist-reverse,playback-playpause,playback-stop,playlist-advance}
+# mpd volume
+super + shift {plus,F10,minus,F9}
+	{mpc volume +5,mpc volume +5,mpc volume -5,mpc volume -5}
+
+# volume control
+super + {plus,F10,minus,F9}
+	pamixer {-i 5,-i 5,-d 5,-d 5} && pkill -RTMIN+10 dwmblocks
+# mute
+super + F11
+	pamixer -t && pkill -RTMIN+10 dwmblocks
+# launch pulsemixer
+super + F12 
+	st -e pulsemixer
+
+# dmenu
+# larbs session menu (shutdowm, reboot, lock, etc)
+super + BackSpace
+	sysact
+# larbs emojis menu
+super + shift + u
+	dmenuunicode
+
+# kill window with mouse
+ctrl + alt + Escape
+        xkill
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
