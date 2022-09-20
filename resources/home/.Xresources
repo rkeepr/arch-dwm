@@ -41,12 +41,6 @@ Xft.hinting: true
 Xft.rgba: rgb
 Xft.hintstyle: hintfull
 
-!dmenu.font: Hack Nerd Font:style:Regular:pixelsize=15,
-!dmenu.background: #222222
-!dmenu.foreground: #bbbbbb
-!dmenu.selbackground : #005577
-!dmenu.selforeground : #eeeeee
-
 ! urxvt options
 URxvt.perl-ext-common: default,matcher
 URxvt.geometry: 100x36

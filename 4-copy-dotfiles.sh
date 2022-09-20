@@ -1,15 +1,23 @@
 #!/bin/sh
 
 user=$(id -u -n 1000)
+current_loc=$(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
 
 # check if these folders exist, if not create them.
-[ ! -d "/home/$user/downloads" ] && mkdir -p "/home/$user/downloads"
-[ ! -d "/home/$user/images" ] && mkdir -p "/home/$user/images"
-[ ! -d "/home/$user/videos" ] && mkdir -p "/home/$user/videos"
-[ ! -d "/home/$user/.config" ] && mkdir -p "/home/$user/.config"
-[ ! -d "/home/$user/.local" ] && mkdir -p "/home/$user/.local"
+[ ! -d "$HOME/downloads" ] && mkdir -p "$HOME/downloads"
+[ ! -d "$HOME/images" ] && mkdir -p "$HOME/images"
+[ ! -d "$HOME/videos" ] && mkdir -p "$HOME/videos"
+[ ! -d "$HOME/.config" ] && mkdir -p "$HOME/.config"
+[ ! -d "$HOME/.local" ] && mkdir -p "$HOME/.local"
 
 # copy dotfiles.
-cp -r resources/config/* /home/$user/.config
-cp -r resources/local/* /home/$user/.local
-cp -r resources/home/* /home/$user/
+cp -r resources/config/* $HOME/.config
+cp -r resources/local/* $HOME/.local
+cp -r resources/home/. $HOME
+
+# modify generic "user" for current user
+sed -i -e "s/user/$user/g" "$HOME/.config/flameshot/flameshot.ini"
+sed -i -e "s/user/$user/g" "$HOME/.local/share/lf/marks"
+
+# modify redshift value in xinitrc with current location
+sed -i -e "/s/replace-loc/$current_loc" "$HOME/.xinitrc"

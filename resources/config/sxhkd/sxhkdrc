@@ -4,7 +4,7 @@
 super + {F1,F2,F3,F4}
 	{dmenu_run,st,brave,st -e ncmpcpp}
 ctrl + {F1,F2,F3,F4}
-	st -e lf {~/,~/downloads,/mnt/storage/music,~/videos}
+	st -e lf {~/,~/downloads,~/music,~/videos}
 
 Print
 	flameshot gui
