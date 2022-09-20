@@ -8,7 +8,7 @@ sudo reflector --latest 30 --sort rate --age 12 --protocol https --save /etc/pac
 sudo pacman -S --needed --noconfirm base-devel xorg-server xorg-xinit libxinerama firefox pcmanfm gvfs xarchiver unrar unzip zip gnu-free-fonts man-db htop
 
 ### install yay (aur helper)
-cd $HOME
+cd ~/
 git clone https://aur.archlinux.org/yay-bin.git
 cd "yay-bin"
 makepkg -si --needed --noconfirm
