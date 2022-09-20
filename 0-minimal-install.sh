@@ -37,3 +37,30 @@ git clone https://github.com/torrinfail/dwmblocks.git
 cp ~/arch-dwm/resources/dwmblocks/blocks.h dwmblocks
 cd "dwmblocks"
 sudo make clean install
+
+## go back to script folder
+cd ~/arch-dwm
+
+### copy and modify the dotfiles
+
+user=$(id -u -n 1000)
+current_loc=$(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
+
+# check if these folders exist, if not create them
+[ ! -d "$HOME/downloads" ] && mkdir -p "$HOME/downloads"
+[ ! -d "$HOME/images" ] && mkdir -p "$HOME/images"
+[ ! -d "$HOME/videos" ] && mkdir -p "$HOME/videos"
+[ ! -d "$HOME/.config" ] && mkdir -p "$HOME/.config"
+[ ! -d "$HOME/.local" ] && mkdir -p "$HOME/.local"
+
+# copy the dotfiles
+cp -r resources/config/* $HOME/.config
+cp -r resources/local/* $HOME/.local
+cp -r resources/home/. $HOME
+
+# modify generic "user" for current user
+sed -i -e "s/user/$user/" "$HOME/.config/flameshot/flameshot.ini"
+sed -i -e "s/user/$user/g" "$HOME/.local/share/lf/marks"
+
+# modify redshift value in xinitrc with current location
+sed -i -e "s/replace-loc/$current_loc/" "$HOME/.xinitrc"

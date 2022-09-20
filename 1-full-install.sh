@@ -59,11 +59,11 @@ cp -r resources/local/* $HOME/.local
 cp -r resources/home/. $HOME
 
 # modify generic "user" for current user
-sed -i -e "s/user/$user/g" "$HOME/.config/flameshot/flameshot.ini"
+sed -i -e "s/user/$user/" "$HOME/.config/flameshot/flameshot.ini"
 sed -i -e "s/user/$user/g" "$HOME/.local/share/lf/marks"
 
 # modify redshift value in xinitrc with current location
-sed -i -e "/s/replace-loc/$current_loc" "$HOME/.xinitrc"
+sed -i -e "s/replace-loc/$current_loc/" "$HOME/.xinitrc"
 
 ### configure and enable ufw
 sudo ufw limit 22/tcp # ssh
