@@ -38,7 +38,7 @@ setxkbmap es &
 numlockx &
 setbg &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-redshift -l replace-loc &
+redshift -l replace-loc -t 6500:3500 &
 unclutter &
 sxhkd &
 picom &
