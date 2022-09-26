@@ -24,7 +24,7 @@ set -o vi
 
 #PS1="\[$BOLD\]\[$CYAN\][\u@\h \[$BLUE\]\W\[$cyan\]]\\[$YELLOW\]\$(gitPS1) \[$cyan\]\$ \[$RESET\]"
 #PS1="\[$BOLD\]\[$BLUE\]\W\[$MAGENTA\]\$(gitPS1) \[$RED\]❯\[$YELLOW\]❯\[$GREEN\]❯ \[$CYAN\]\$ \[$RESET\]"
-PS1="\[$BOLD\]\[$BLUE\]\W\[$MAGENTA\]\$(gitPS1) \[$YELLOW\]気 \[$CYAN\]\$ \[$RESET\]"
+PS1="\[$BOLD\]\[$BLUE\]\W\[$MAGENTA\]\$(gitPS1) \[$YELLOW\]❯ \[$CYAN\]\$ \[$RESET\]"
 
 alias ls="ls -hN --color=auto --group-directories-first"
 alias grep="grep --color=auto"
