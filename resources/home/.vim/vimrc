@@ -37,6 +37,9 @@ set mouse=a
 " search as you type
 set incsearch
 
+" don't highlight every search match
+set nohlsearch
+
 " Split the window below. Split the window vertically to the right
 set splitbelow splitright
 

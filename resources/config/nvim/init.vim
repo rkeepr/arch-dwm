@@ -13,6 +13,9 @@ set relativenumber
 " mouse support i.e. clicking
 set mouse=a
 
+" don't highlight every search match
+set nohlsearch
+
 " Split the window below. Split the window vertically to the right
 set splitbelow splitright
 
