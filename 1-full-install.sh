@@ -43,9 +43,6 @@ cd ~/arch-dwm
 
 ### copy and modify the dotfiles
 
-user=$(id -u -n 1000)
-current_loc=$(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
-
 # check if these folders exist, if not create them
 [ ! -d "$HOME/downloads" ] && mkdir -p "$HOME/downloads"
 [ ! -d "$HOME/images" ] && mkdir -p "$HOME/images"
