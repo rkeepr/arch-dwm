@@ -1,35 +1,18 @@
 [Default Applications]
+application/pdf=atril.desktop
+application/x-cue=mpv.desktop
 audio/flac=mpv.desktop
 audio/mp4=mpv.desktop
 audio/mpeg=mpv.desktop
-application/pdf=atril.desktop
-application/x-cue=mpv.desktop
-video/mp4=mpv.desktop
-video/mpeg=mpv.desktop
-video/x-matroska=mpv.desktop
-video/x-ogm+ogg=mpv.desktop
+audio/x-wav=mpv.desktop
 image/jpeg=viewnior.desktop
 image/png=viewnior.desktop
-text/plain=vim.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-GPIGK1.desktop
-audio/x-wav=mpv.desktop
-video/quicktime=mpv.desktop
+text/html=nvim.desktop
+text/plain=nvim.desktop
 video/mp2t=mpv.desktop
-
-[Added Associations]
-x-scheme-handler/tg=userapp-Telegram Desktop-GPIGK1.desktop;
-text/plain=nvim.desktop;vim.desktop;
-application/pdf=atril.desktop;
-video/mp4=mpv.desktop;
-video/x-matroska=mpv.desktop;
-image/jpeg=viewnior.desktop;
-audio/mpeg=mpv.desktop;
-audio/mp4=mpv.desktop;
-image/png=viewnior.desktop;
-image/jp2=brave-browser.desktop;viewnior.desktop;
-application/x-cue=mpv.desktop;
-video/x-ogm+ogg=mpv.desktop;
-text/x-chdr=nvim.desktop;
-audio/x-wav=mpv.desktop;
-video/quicktime=mpv.desktop;
-video/mp2t=mpv.desktop;
+video/mp4=mpv.desktop
+video/mpeg=mpv.desktop
+video/quicktime=mpv.desktop
+video/x-matroska=mpv.desktop
+video/x-ogm+ogg=mpv.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-GPIGK1.desktop

@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # modify the config file for redshift with current location
 
 CURL_LOC="$(curl -s https://location.services.mozilla.com/v1/geolocate?key=geoclue)"

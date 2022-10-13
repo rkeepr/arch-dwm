@@ -1,4 +1,5 @@
 #!/bin/sh
+
 ### arch linux ###
 
 userresources=$HOME/.Xresources

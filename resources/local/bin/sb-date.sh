@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # date format = "Mon 01 23:59"
 # needs: nerdfonts or font patched with nerdfonts
 

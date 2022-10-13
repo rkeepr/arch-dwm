@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # needs: nerdfonts or font patched with nerdfonts
 
 NERDFONTS=true

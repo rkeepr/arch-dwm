@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # needs: pamixer, emojis enabled in dwm, emoji font, nerdfonts or font patched with nerdfonts
 
 mute="$(pamixer --get-mute)"

@@ -20,7 +20,7 @@ gitPS1(){
 }
 
 # vi mode
-set -o vi
+#set -o vi
 
 #PS1="\[$BOLD\]\[$CYAN\][\u@\h \[$BLUE\]\W\[$cyan\]]\\[$YELLOW\]\$(gitPS1) \[$cyan\]\$ \[$RESET\]"
 #PS1="\[$BOLD\]\[$BLUE\]\W\[$MAGENTA\]\$(gitPS1) \[$RED\]❯\[$YELLOW\]❯\[$GREEN\]❯ \[$CYAN\]\$ \[$RESET\]"
