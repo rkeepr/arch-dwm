@@ -5,7 +5,7 @@ sudo pacman -S --needed --noconfirm reflector
 sudo reflector --latest 30 --sort rate --age 12 --protocol https --save /etc/pacman.d/mirrorlist
 
 ### basic install
-sudo pacman -S --needed --noconfirm base-devel xorg-server xorg-xinit libxinerama firefox pcmanfm gvfs xarchiver unrar unzip zip gnu-free-fonts man-db htop
+sudo pacman -S --needed --noconfirm base-devel xorg-server xorg-xinit libxinerama firefox lf pcmanfm gvfs xarchiver unrar unzip zip gnu-free-fonts man-db htop
 
 ### install yay (aur helper)
 cd ~/
@@ -13,7 +13,7 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd "yay-bin"
 makepkg -si --needed --noconfirm
 # install some necessary packages from the aur
-yay -S --needed --noconfirm nerd-fonts-hack lf-bin
+yay -S --needed --noconfirm nerd-fonts-hack
 
 ### suckless
 mkdir ~/dwm-build && cd ~/dwm-build
