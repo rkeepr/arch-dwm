@@ -6,8 +6,8 @@
 ### full install
 ./install-packages.sh
 
-### install yay (aur helper)
-./install-yay.sh
+### install aur helper
+./install-aur-helper.sh
 # install some packages from the aur
 ./install-aur-packages.sh
 
