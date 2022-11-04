@@ -44,8 +44,9 @@ unclutter &
 sxhkd &
 picom &
 mpd &
-pcmanfm --daemon-mode &
+thunar --daemon &
 flameshot &
+qbittorrent &
 
 ### dwm ###
 dwmblocks &

@@ -23,7 +23,6 @@ gitPS1(){
 #set -o vi
 
 #PS1="\[$BOLD\]\[$CYAN\][\u@\h \[$BLUE\]\W\[$cyan\]]\\[$YELLOW\]\$(gitPS1) \[$cyan\]\$ \[$RESET\]"
-#PS1="\[$BOLD\]\[$BLUE\]\W\[$MAGENTA\]\$(gitPS1) \[$RED\]❯\[$YELLOW\]❯\[$GREEN\]❯ \[$CYAN\]\$ \[$RESET\]"
 PS1="\[$BOLD\]\[$BLUE\]\W\[$MAGENTA\]\$(gitPS1) \[$YELLOW\]❯ \[$CYAN\]\$ \[$RESET\]"
 
 alias ls="ls -hN --color=auto --group-directories-first"

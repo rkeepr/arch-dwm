@@ -1,6 +1,7 @@
 #!/bin/sh
 
-mkdir ~/dwm-build && cd ~/dwm-build
+[ ! -d "$HOME/.local/src" ] && mkdir -p "$HOME/.local/src"
+cd ~/.local/src
 # dwm
 git clone https://github.com/rkeepr/dwm.git
 cd "dwm"
