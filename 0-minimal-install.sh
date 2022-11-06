@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ### get better mirrors with reflector
-./reflector
+./reflector.sh
 
 ### basic install
 sudo pacman -S --needed --noconfirm base-devel xorg-server xorg-xinit libxinerama firefox lf thunar thunar-archive-plugin thunar-volman thunar-media-tags-plugin tumbler gvfs xarchiver unrar unzip zip man-db htop ttf-hack-nerd libertinus-font 
