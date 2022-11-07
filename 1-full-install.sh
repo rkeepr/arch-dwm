@@ -18,4 +18,4 @@
 cd ~/arch-dwm
 
 ### copy and modify the dotfiles
-./copy-dotfiles
+./copy-dotfiles.sh

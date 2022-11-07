@@ -16,4 +16,4 @@ sudo pacman -S --needed --noconfirm base-devel xorg-server xorg-xinit libxineram
 cd ~/arch-dwm
 
 ### copy and modify the dotfiles
-./copy-dotfiles
+./copy-dotfiles.sh
