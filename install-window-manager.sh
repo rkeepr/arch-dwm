@@ -22,3 +22,4 @@ git clone https://github.com/torrinfail/dwmblocks.git
 cp ~/arch-dwm/resources/dwmblocks/blocks.h dwmblocks
 cd "dwmblocks"
 sudo make clean install
+cd
