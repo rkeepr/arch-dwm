@@ -18,7 +18,9 @@ cd "st"
 sudo make clean install
 cd ..
 # dwmblocks
-git clone https://github.com/torrinfail/dwmblocks.git
+curl -Lo dwmblocks.zip https://github.com/torrinfail/dwmblocks/archive/refs/heads/master.zip
+unzip dwmblocks.zip
+mv dwmblocks-master dwmblocks
 cp ~/arch-dwm/resources/dwmblocks/blocks.h dwmblocks
 cd "dwmblocks"
 sudo make clean install
