@@ -19,6 +19,7 @@ sudo make clean install
 cd ..
 # dwmblocks
 git clone https://github.com/torrinfail/dwmblocks.git
-cp ~/arch-dwm/resources/dwmblocks/blocks.h dwmblocks
 cd "dwmblocks"
+rm -rf .git
+cp ~/arch-dwm/resources/dwmblocks/blocks.h .
 sudo make clean install
