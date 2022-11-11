@@ -3,17 +3,14 @@
 [ ! -d "$HOME/.local/src" ] && mkdir -p "$HOME/.local/src"
 cd ~/.local/src
 
-# dwm
-git clone https://github.com/rkeepr/dwm.git
-cd "dwm"
-sudo make clean install
-cd ..
-
-# st
-git clone https://github.com/rkeepr/st.git
-cd "st"
-sudo make clean install
-cd ..
+# dwm and st
+for s in dwm st
+do
+	 git clone https://github.com/rkeepr/$s.git
+	 cd $s
+	 sudo make clean install
+	 cd ..
+done
 
 # dmenu
 curl -LO https://dl.suckless.org/tools/dmenu-5.2.tar.gz
