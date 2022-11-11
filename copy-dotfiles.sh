@@ -1,12 +1,7 @@
 #!/bin/sh
 
-# check if these folders exist, if not create them.
-[ ! -d "$HOME/downloads" ] && mkdir -p "$HOME/downloads"
-[ ! -d "$HOME/git" ] && mkdir -p "$HOME/git"
-[ ! -d "$HOME/images" ] && mkdir -p "$HOME/images"
-[ ! -d "$HOME/videos" ] && mkdir -p "$HOME/videos"
-[ ! -d "$HOME/.config" ] && mkdir -p "$HOME/.config"
-[ ! -d "$HOME/.local" ] && mkdir -p "$HOME/.local"
+# create folders
+mkdir -p downloads git images videos .config .local
 
 # copy dotfiles.
 cp -r resources/config/* $HOME/.config

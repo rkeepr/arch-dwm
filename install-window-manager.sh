@@ -1,7 +1,6 @@
 #!/bin/sh
 
-[ ! -d "$HOME/.local/src" ] && mkdir -p "$HOME/.local/src"
-cd ~/.local/src
+mkdir -p "$HOME/.local/src" && cd ~/.local/src
 
 # dwm and st
 for s in dwm st
