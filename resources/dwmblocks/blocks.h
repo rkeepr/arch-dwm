@@ -4,7 +4,7 @@ static const Block blocks[] = {
 /*	{"",		 "sb-cpu-perc.sh",		2,			0},*/
 /*	{"",		 "sb-mem-used.sh",		5,			0},*/
 	{"",		 "sb-home-left.sh",		120,			0},
-	{"",		 "sb-vol-pulse.sh",		0,			10},
+	{"",		 "sb-volume.sh",		0,			10},
 	{"",		 "sb-weather.sh",		21600,			0},
 	{"",		 "sb-date.sh",			30,			0},
 };

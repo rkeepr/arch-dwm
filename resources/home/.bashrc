@@ -19,17 +19,13 @@ gitPS1(){
 	echo "$gitps1"
 }
 
-# vi mode
-#set -o vi
-
-#PS1="\[$BOLD\]\[$CYAN\][\u@\h \[$BLUE\]\W\[$cyan\]]\\[$YELLOW\]\$(gitPS1) \[$cyan\]\$ \[$RESET\]"
 PS1="\[$BOLD\]\[$BLUE\]\W\[$MAGENTA\]\$(gitPS1) \[$YELLOW\]❯ \[$CYAN\]\$ \[$RESET\]"
 
 alias ls="ls -hN --color=auto --group-directories-first"
 alias grep="grep --color=auto"
 alias ip="ip -color=auto"
 alias diff="diff --color=auto"
-alias weather="curl wttr.in/yourcity"
+alias weather="curl wttr.in/"
 alias crypto="curl rate.sx"
 alias reflector-mc="sudo reflector --latest 30 --sort rate --age 12 --protocol https --save /etc/pacman.d/mirrorlist"
 
@@ -46,14 +42,6 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
 export LESSHISTFILE="-"
-
-# lfcd
-LFCD="$HOME/.config/lf/lfcd.sh"
-if [ -f "$LFCD" ]; then
-	source "$LFCD"
-fi
-# bind for lfcd (ctrl+o) (bash)
-bind '"\C-o":"lfcd\C-m"'
 
 # autostart dwm on login with startx
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then

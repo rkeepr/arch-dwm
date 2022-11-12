@@ -38,6 +38,7 @@ xrandr -s 1920x1080
 setxkbmap es &
 numlockx &
 setbg &
+#nitrogen --set-zoom-fill images/wallpapers --random &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 redshift &
 unclutter &

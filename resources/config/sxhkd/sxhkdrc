@@ -2,7 +2,7 @@
 
 # launch programs
 super + {F1,F2,F3,F4}
-	{dmenu_run,st,brave,st -e ncmpcpp}
+	{dmenu_run,st,firefox,st -e ncmpcpp}
 ctrl + {F1,F2,F3,F4}
 	st -e lf {~/,~/downloads,~/music,~/videos}
 
