@@ -3,8 +3,7 @@
 # switch fullscreen on/off for mpv
 conf=$HOME/.config/mpv/mpv.conf
 
-[ ! $(grep 'fullscreen' "$conf") ] && notify-send 'mpv' 'option not found in mpv.conf' && exit
-[ $(grep '^#fullscreen' "$conf") ] && notify-send 'mpv' 'option commented out in mpv.conf' && exit
+[ ! $(grep '^fullscreen' "$conf") ] && notify-send 'error' 'fullscreen option not found in mpv.conf, maybe is commented out' && exit
 
 if [ $(grep '^fullscreen=no' "$conf") ]; then
 	sed -i 's/fullscreen=no/fullscreen=yes/' "$conf"
