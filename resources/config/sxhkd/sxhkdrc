@@ -30,6 +30,10 @@ super + F11
 super + F12 
 	st -e pulsemixer
 
+# switch fullscreen on/off in mpv
+super + shift + f
+	fullscreen4mpv
+
 # dmenu
 # larbs session menu (shutdowm, reboot, lock, etc)
 super + BackSpace
