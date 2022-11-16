@@ -16,9 +16,8 @@ sed -i -e "s/user/$user/" "$HOME/.config/flameshot/flameshot.ini"
 CURL_LOC="$(curl -s https://location.services.mozilla.com/v1/geolocate?key=geoclue)"
 LAT=$(echo $CURL_LOC | awk '{print $3}' | tr -d ',')
 LON=$(echo $CURL_LOC | awk '{print $5}' | tr -d '},')
-WTTR=$(echo $LAT,$LON)
 
 sed -i "s/^lat=.*/lat=$LAT/" "$HOME/.config/redshift/redshift.conf"
 sed -i "s/^lon=.*/lon=$LON/" "$HOME/.config/redshift/redshift.conf"
-sed -i "s/^LOC=.*/LOC=$WTTR/" "$HOME/.local/bin/sb-weather.sh"
-sed -i "s|wttr.in/.*|wttr.in/$WTTR\"|" "$HOME/.bashrc"
+sed -i "s/^LOC=.*/LOC=$LAT,$LON/" "$HOME/.local/bin/sb-weather.sh"
+sed -i "s|wttr.in/.*|wttr.in/$LAT,$LON\"|" "$HOME/.bashrc"
