@@ -1,7 +1,10 @@
 #!/bin/sh
 
 # create folders
-mkdir -p downloads git images videos .config .local
+for n in downloads git images videos .config .local
+do
+	mkdir -p $HOME/$n
+done
 
 # copy dotfiles.
 cp -r resources/config/* $HOME/.config
@@ -10,7 +13,7 @@ cp -r resources/home/. $HOME
 
 # modify flameshot's config file with current user
 user=$(id -u -n 1000)
-sed -i -e "s/user/$user/" "$HOME/.config/flameshot/flameshot.ini"
+sed -i "s/user/$user/" "$HOME/.config/flameshot/flameshot.ini"
 
 # modify redshift's config file with current location
 CURL_LOC="$(curl -s https://location.services.mozilla.com/v1/geolocate?key=geoclue)"
