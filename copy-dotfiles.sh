@@ -11,6 +11,10 @@ cp -r resources/config/* $HOME/.config
 cp -r resources/local/* $HOME/.local
 cp -r resources/home/. $HOME
 
+# get monitor resolution
+res=$(xrandr | awk '/*/ {print $1}')
+sed -i "s/^xrandr.*/xrandr -s $res/" "$HOME/.xinitrc"
+
 # modify flameshot's config file with current user
 user=$(id -u -n 1000)
 sed -i "s/user/$user/" "$HOME/.config/flameshot/flameshot.ini"
