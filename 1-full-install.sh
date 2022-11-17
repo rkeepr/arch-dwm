@@ -14,8 +14,5 @@
 ### suckless
 ./install-window-manager.sh
 
-### go back to script folder
-cd ~/arch-dwm
-
 ### copy and modify the dotfiles
 ./copy-dotfiles.sh

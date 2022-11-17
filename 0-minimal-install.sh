@@ -12,8 +12,5 @@ sudo pacman -S --needed --noconfirm base-devel xorg-server xorg-xinit libxineram
 ### suckless
 ./install-window-manager.sh
 
-### go back to script folder
-cd ~/arch-dwm
-
 ### copy and modify the dotfiles
 ./copy-dotfiles.sh
