@@ -24,7 +24,7 @@ CURL_LOC="$(curl -s https://location.services.mozilla.com/v1/geolocate?key=geocl
 LAT=$(echo $CURL_LOC | awk '{print $3}' | tr -d ',')
 LON=$(echo $CURL_LOC | awk '{print $5}' | tr -d '},')
 
-sed -i "s/^lat=.*/lat=$LAT/" "$HOME/.config/redshift/redshift.conf"
-sed -i "s/^lon=.*/lon=$LON/" "$HOME/.config/redshift/redshift.conf"
-sed -i "s/^LOC=.*/LOC=$LAT,$LON/" "$HOME/.local/bin/sb-weather.sh"
-sed -i "s|wttr.in/.*|wttr.in/$LAT,$LON\"|" "$HOME/.bashrc"
+sed -i "s/^lat=/&$LAT/" "$HOME/.config/redshift/redshift.conf"
+sed -i "s/^lon=/&$LON/" "$HOME/.config/redshift/redshift.conf"
+sed -i "s/^LOC=/&$LAT,$LON/" "$HOME/.local/bin/sb-weather.sh"
+sed -i "s|wttr.in/|&$LAT,$LON|" "$HOME/.bashrc"
