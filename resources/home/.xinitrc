@@ -46,7 +46,7 @@ picom &
 mpd &
 thunar --daemon &
 flameshot &
-qbittorrent &
+#qbittorrent &
 
 ### dwm ###
 dwmblocks &
