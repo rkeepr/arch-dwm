@@ -35,7 +35,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 xrandr -s 1920x1080
-setxkbmap es &
 numlockx &
 setbg &
 #nitrogen --set-zoom-fill images/wallpapers --random &
