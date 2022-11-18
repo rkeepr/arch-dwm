@@ -1,7 +1,7 @@
 #!/bin/sh
 
-EMOJIS=false
 LOC=
+EMOJIS=false
 
 if [ "$EMOJIS" = "true" ]; then
 	printf "[%s]\n" "$(curl -s wttr.in/$LOC?format=1)"
