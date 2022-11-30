@@ -11,6 +11,9 @@ cp -r resources/config/* $HOME/.config
 cp -r resources/local/* $HOME/.local
 cp -r resources/home/. $HOME
 
+# mpd playlist
+mkdir -p $HOME/.local/share/mpd/playlists
+
 # get monitor resolution
 res=$(xrandr | awk '/*/ {print $1}')
 sed -i "s/^xrandr.*/xrandr -s $res/" "$HOME/.xinitrc"
