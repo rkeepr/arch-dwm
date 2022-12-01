@@ -23,11 +23,11 @@ user=$(id -u -n 1000)
 sed -i "s/user/$user/" "$HOME/.config/flameshot/flameshot.ini"
 
 # modify redshift's config file with current location
-CURL_LOC="$(curl -s https://location.services.mozilla.com/v1/geolocate?key=geoclue)"
-LAT=$(echo $CURL_LOC | awk '{print $3}' | tr -d ',')
-LON=$(echo $CURL_LOC | awk '{print $5}' | tr -d '},')
+curl_loc="$(curl -s https://location.services.mozilla.com/v1/geolocate?key=geoclue)"
+lat=$(echo $curl_loc | awk '{print $3}' | tr -d ',')
+lon=$(echo $curl_loc | awk '{print $5}' | tr -d '},')
 
-sed -i "s/^lat=/&$LAT/" "$HOME/.config/redshift/redshift.conf"
-sed -i "s/^lon=/&$LON/" "$HOME/.config/redshift/redshift.conf"
-sed -i "s/^LOC=/&$LAT,$LON/" "$HOME/.local/bin/sb-weather.sh"
-sed -i "s|wttr.in/|&$LAT,$LON|" "$HOME/.bashrc"
+sed -i "s/^lat=/&$lat/" "$HOME/.config/redshift/redshift.conf"
+sed -i "s/^lon=/&$lon/" "$HOME/.config/redshift/redshift.conf"
+sed -i "s/^loc=/&$lat,$lon/" "$HOME/.local/bin/sb-weather.sh"
+sed -i "s|wttr.in/|&$lat,$lon|" "$HOME/.bashrc"

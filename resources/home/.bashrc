@@ -5,21 +5,21 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 # variables for PS1
-RED=$(tput setaf 1)
-GREEN=$(tput setaf 2)
-YELLOW=$(tput setaf 3)
-BLUE=$(tput setaf 4)
-MAGENTA=$(tput setaf 5)
-CYAN=$(tput setaf 6)
-BOLD=$(tput bold)
-RESET=$(tput sgr0)
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+yellow=$(tput setaf 3)
+blue=$(tput setaf 4)
+magenta=$(tput setaf 5)
+cyan=$(tput setaf 6)
+bold=$(tput bold)
+color_reset=$(tput sgr0)
 gitPS1(){
 	gitps1=$(git branch 2>/dev/null | grep '*')
 	gitps1="${gitps1:+ ${gitps1/#\* /}}"
 	echo "$gitps1"
 }
 
-PS1="\[$BOLD\]\[$BLUE\]\W\[$MAGENTA\]\$(gitPS1) \[$YELLOW\]❯ \[$CYAN\]\$ \[$RESET\]"
+PS1="\[$bold\]\[$blue\]\W\[$magenta\]\$(gitPS1) \[$yellow\]❯ \[$cyan\]\$ \[$color_reset\]"
 
 alias ls="ls -hN --color=auto --group-directories-first"
 alias grep="grep --color=auto"
