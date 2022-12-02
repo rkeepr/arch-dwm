@@ -34,25 +34,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-eval $(ssh-agent)
-#xrandr -s 1920x1080
-numlockx &
-setbg &
-#nitrogen --set-zoom-fill images/wallpapers --random &
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-redshift &
-unclutter &
-sxhkd &
-picom &
-mpd &
-thunar --daemon &
-flameshot &
-#qbittorrent &
+# source .xprofile
+[ -f ~/.xprofile ] && . ~/.xprofile
 
-### dwm ###
-dwmblocks &
-# while loop to reload dwm instead of quiting xorg
-#while true; do
-#	dwm > /dev/null 2>&1
-#done
 exec dwm

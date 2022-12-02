@@ -15,4 +15,3 @@ video/mpeg=mpv.desktop
 video/quicktime=mpv.desktop
 video/x-matroska=mpv.desktop
 video/x-ogm+ogg=mpv.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-GPIGK1.desktop

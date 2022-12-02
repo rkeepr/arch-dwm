@@ -1,9 +1,9 @@
-#
 # ~/.bashrc
-#
+# arch linux
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
 # variables for PS1
 red=$(tput setaf 1)
 green=$(tput setaf 2)
@@ -41,7 +41,12 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
-export LESSHISTFILE="-"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export HISTFILE="$XDG_STATE_HOME/bash/history"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 
 # autostart dwm on login with startx
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then

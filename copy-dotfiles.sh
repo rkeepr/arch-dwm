@@ -11,8 +11,9 @@ cp -r resources/config/* $HOME/.config
 cp -r resources/local/* $HOME/.local
 cp -r resources/home/. $HOME
 
-# mpd playlist
+# create even more folders...
 mkdir -p $HOME/.local/share/mpd/playlists
+mkdir -p $HOME/.local/state/bash
 
 # get monitor resolution
 res=$(xrandr | awk '/*/ {print $1}')
@@ -21,6 +22,8 @@ sed -i "s/^xrandr.*/xrandr -s $res/" "$HOME/.xinitrc"
 # modify flameshot's config file with current user
 user=$(id -u -n 1000)
 sed -i "s/user/$user/" "$HOME/.config/flameshot/flameshot.ini"
+sed -i "s/user/$user/" "$HOME/.config/gtk-2.0/gtkrc"
+sed -i "s/user/$user/g" "$HOME/.config/gtk-3.0/bookmarks"
 
 # modify redshift's config file with current location
 curl_loc="$(curl -s https://location.services.mozilla.com/v1/geolocate?key=geoclue)"

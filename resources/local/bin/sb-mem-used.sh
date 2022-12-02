@@ -1,3 +1,3 @@
 #!/bin/sh
 
-printf "[mem:%s]\n" "$(free -h | grep 'Mem' | awk '{print $3}')"
+echo "["$(free -h | grep 'Mem' | awk '{print $3}')"]"
