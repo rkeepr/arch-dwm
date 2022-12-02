@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# get current location for redshift and wttr scripts
+# get current location for redshift, the sb-weather script and the weather alias
 
 curl_loc="$(curl -s https://location.services.mozilla.com/v1/geolocate?key=geoclue)"
 lat=$(echo $curl_loc | awk '{print $3}' | tr -d ',')

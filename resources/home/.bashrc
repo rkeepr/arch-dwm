@@ -25,7 +25,7 @@ alias ls="ls -hN --color=auto --group-directories-first"
 alias grep="grep --color=auto"
 alias ip="ip -color=auto"
 alias diff="diff --color=auto"
-alias weather="curl wttr.in/"
+alias weather="curl wttr.in/REPLACE_WITH_COORDINATES"
 alias crypto="curl rate.sx"
 alias reflector-mc="sudo reflector --latest 30 --sort rate --age 12 --protocol https --save /etc/pacman.d/mirrorlist"
 

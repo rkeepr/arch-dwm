@@ -1,6 +1,6 @@
 #!/bin/sh
 
-loc=
+loc=REPLACE_WITH_COORDINATES
 emojis=false
 
 if [ "$emojis" = "true" ]; then
