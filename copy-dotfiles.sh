@@ -1,18 +1,20 @@
 #!/bin/sh
-# create folders to copy the dotfiles
-mkdir -p "$HOME/.config" "$HOME/.local"
+
+# create folders
+dir_names="downloads git images videos .config .local .config/git .local/share/mpd/playlists .local/state/bash"
+for name in $dir_names
+do
+	mkdir -p $HOME/$name
+done
+
+# link secondary drive
+sd="/mnt/storage"
+[ -d $sd ] && ln -s $sd $sd/music $HOME
 
 # copy the dotfiles.
 cp -r resources/config/* $HOME/.config
 cp -r resources/local/* $HOME/.local
 cp -r resources/home/. $HOME
-
-# create folders
-dir_names="downloads git images videos .ssh .config/git .local/share/mpd/playlists .local/state/bash"
-for name in $dir_names
-do
-	mkdir -p $HOME/$name
-done
 
 # modify these config files with current user
 current_user=$(id -u -n 1000)
