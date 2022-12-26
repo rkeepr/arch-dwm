@@ -1,8 +1,5 @@
 #!/bin/sh
 
-### get better mirrors with reflector
-./reflector.sh
-
 ### full install
 ./install-packages.sh
 
