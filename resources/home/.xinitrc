@@ -37,4 +37,9 @@ fi
 # source .xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
+# while loop to reload dwm instead of quiting xorg
+#while true; do
+#	dwm > /dev/null 2>&1
+#done
+
 exec dwm

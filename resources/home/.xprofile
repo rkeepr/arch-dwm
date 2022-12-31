@@ -10,8 +10,3 @@ autostart="dwmblocks numlockx redshift unclutter sxhkd picom mpd flameshot qbitt
 for program in $autostart; do
 	pidof -s "$program" || "$program" &
 done >/dev/null 2>&1
-
-# while loop to reload dwm instead of quiting xorg
-#while true; do
-#	dwm > /dev/null 2>&1
-#done
