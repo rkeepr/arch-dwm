@@ -1,40 +1,39 @@
 ! special
 *.foreground:   #d0d0d0
-*.cursorColor:  #d0d0d0
 *.background:   #111111
+*.cursorColor:  #d0d0d0
 
 ! black
 *.color0:       #151515
 *.color8:       #505050
 
 ! red
-*.color1:       #F25054
-*.color9:       #F25054
+*.color1:       #f25054
+*.color9:       #f25054
 
 ! green
-*.color2:       #4BCC4B
-*.color10:      #4BCC4B
+*.color2:       #2db959
+*.color10:      #2db959
 
 ! yellow
-*.color3:       #FFC34C
-*.color11:      #FFC34C
+*.color3:       #ffc34c
+*.color11:      #ffc34c
 
 ! blue
-*.color4:       #4187CC
-*.color12:      #4187CC
+*.color4:       #4187cc
+*.color12:      #4187cc
 
 ! magenta
-*.color5:       #CF66CF
-*.color13:      #CF66CF
+*.color5:       #906cff
+*.color13:      #906cff
 
 ! cyan
-*.color6:       #42CCCC
-*.color14:      #42CCCC
+*.color6:       #42cccc
+*.color14:      #42cccc
 
 ! white
 *.color7:       #d3d0c8
 *.color15:      #f2f0ec
-
 
 Xft.antialias: true
 Xft.hinting: true
