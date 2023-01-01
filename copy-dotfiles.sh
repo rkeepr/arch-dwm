@@ -2,9 +2,9 @@
 
 # create folders
 dir_names="downloads git images videos .config .local .config/git .local/share/mpd/playlists .local/state/bash"
-for name in $dir_names
+for d in $dir_names
 do
-	mkdir -p $HOME/$name
+	mkdir -p $HOME/$d
 done
 
 # link secondary drive
@@ -18,10 +18,10 @@ cp -r resources/home/. $HOME
 
 # modify these config files with current user
 current_user=$(id -u -n 1000)
-conf_rep="flameshot/flameshot.ini gtk-2.0/gtkrc gtk-3.0/bookmarks"
-for conf_name in $conf_rep
+ftm="flameshot/flameshot.ini gtk-2.0/gtkrc gtk-3.0/bookmarks"
+for cf in $ftm
 do 
-	sed -i "s/REPLACE_WITH_USERNAME/$current_user/g" "$HOME/.config/$conf_name"
+	sed -i "s/REPLACE_WITH_USERNAME/$current_user/g" "$HOME/.config/$cf"
 done
 
 # modify redshift's config file with current location
