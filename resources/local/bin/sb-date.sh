@@ -1,5 +1,5 @@
 #!/bin/sh
 
-# date format = "Mon 01 23:59"
+# date format = "Mon Jan 01 23:59"
 
-echo "[ "$(date "+%a %d %R")"]"
+echo "[ "$(date "+%a %b %d %R")"]"
