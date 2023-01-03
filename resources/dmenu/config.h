@@ -5,7 +5,7 @@ static int topbar = 1;                      /* -b  option; if 0, dmenu appears a
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
 	"monospace:size=10:antialias=true:autohint=true",
-	"Source Han Sans:size=10:antialias=true:autohint=true",
+	"Noto Sans Mono CJK JP:size=10:antialias=true:autohint=true",
 	"Joy Pixels:pixelsize=12:antialias=true:autohint=true",
 	"Noto Color Emoji:pixelsize=12:antialias=true:autohint=true"
 };
