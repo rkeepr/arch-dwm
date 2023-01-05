@@ -4,7 +4,7 @@
 super + {F1,F2,F3,F4}
 	{dmenu_run,st,$BROWSER,st -e ncmpcpp}
 ctrl + {F1,F2,F3,F4}
-	st -e lf {~/,~/downloads,~/music,~/videos}
+	st -e lf {~/,~/downloads,~/music/,~/videos}
 
 Print
 	flameshot gui

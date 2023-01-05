@@ -49,7 +49,9 @@ map gi cd ~/images
 map gm cd ~/music
 map gs cd ~/storage
 map gv cd ~/videos
-map g. cd ~/.config
+map gt cd ~/torrent
+map gg cd ~/git
+map gc cd ~/.config
 map gb cd ~/.local/bin
 
 # define a custom 'open' command
