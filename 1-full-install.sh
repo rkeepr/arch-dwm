@@ -4,12 +4,12 @@
 ./install-packages.sh
 
 ### install aur helper
-./install-aur-helper.sh
+which yay && echo "aur helper already installed, skipping." || ./install-aur-helper.sh
 # install some packages from the aur
 ./install-aur-packages.sh
 
 ### suckless
-./install-window-manager.sh
+which st dwm dmenu dwmblocks && echo "window manager already installed, skipping." || ./install-window-manager.sh
 
 ### copy and modify the dotfiles
 ./copy-dotfiles.sh
