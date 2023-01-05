@@ -1,35 +1,34 @@
-base-devel
-xorg-server
-xorg-xinit
-libxinerama
-firefox
-lf
-vim
-neovim
-thunar
-thunar-archive-plugin
-thunar-volman
-thunar-media-tags-plugin
+base-devel #M
+xorg-server #M
+xorg-xinit #M
+libxinerama #M
+firefox #M
+lf #M
+neovim #M
+thunar #M
+thunar-archive-plugin #M
+thunar-volman #M
+thunar-media-tags-plugin #M
 tumbler
-gvfs
+gvfs #M
 gvfs-mtp
-xarchiver
-unzip
-zip
+xarchiver #M
+unzip #M
+zip #M
 unrar
 p7zip
-man-db
-htop
-ttf-hack-nerd
-ttf-liberation
+man-db #M
+htop #M
+ttf-hack-nerd #M
+ttf-liberation #M
 noto-fonts
-noto-fonts-cjk
-noto-fonts-emoji
-ttf-joypixels
-wireplumber
-pipewire-pulse
-pulsemixer
-pamixer
+noto-fonts-cjk #M
+noto-fonts-emoji #M
+ttf-joypixels #
+wireplumber #M
+pipewire-pulse #M
+pulsemixer #M
+pamixer #M
 mpd
 mpc
 ncmpcpp
@@ -37,40 +36,40 @@ mpv
 yt-dlp
 vlc
 libdvdcss
-viewnior
+viewnior #M
 lxappearance
 qt5ct
 qt6ct
-xwallpaper
-nitrogen
-redshift
-unclutter
-picom
-papirus-icon-theme
-materia-gtk-theme
-kvantum
-kvantum-theme-materia
-sxhkd
+xwallpaper #M
+nitrogen #M
+redshift #M
+unclutter #M
+picom #M
+papirus-icon-theme #M
+materia-gtk-theme #M
+kvantum #M
+kvantum-theme-materia #M
+sxhkd #M
 neofetch
-trash-cli
-xclip
+trash-cli #M
+xclip #M
 xdotool
 reflector
-numlockx
-dunst
-slock
-bc
+numlockx #M
+dunst #M
+slock #M
+bc #M
 lxtask
-moreutils
-bash-completion
-perl-file-mimeinfo
-xdg-user-dirs
+moreutils #M
+bash-completion #M
+perl-file-mimeinfo #M
+xdg-user-dirs #M
 xcolor
 cuetools
 rxvt-unicode
 simple-scan
 xsane
-keepassxc
+keepassxc #M
 picard
 gimp
 imagemagick
@@ -78,18 +77,18 @@ handbrake
 qbittorrent
 amule
 libreoffice-fresh
-atril
+atril #M
 pdfarranger
 fcitx5
 fcitx5-mozc
 fcitx5-configtool
 fcitx5-gtk
 fcitx5-qt
-gnome-keyring
+gnome-keyring #M
 seahorse
-polkit-gnome
+polkit-gnome #M
 xorg-xev
-xorg-xkill
+xorg-xkill #M
 xorg-xprop
 xorg-xsetroot
 xorg-xwininfo
