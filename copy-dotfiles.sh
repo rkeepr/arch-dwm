@@ -7,9 +7,11 @@ do
 	mkdir -p $HOME/$d
 done
 
-# link secondary drive
+# link secondary drives
 sd="/mnt/storage"
+td="/mnt/torrent"
 [ -d $sd ] && ln -s $sd $sd/music $HOME
+[ -d $td ] && ln -s $td $HOME
 
 # copy the dotfiles.
 cp -r resources/config/* $HOME/.config
