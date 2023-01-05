@@ -10,4 +10,4 @@ which yay && echo "aur helper already installed, skipping." || ./install-aur-hel
 which st dwm dmenu dwmblocks && echo "window manager already installed, skipping." || ./install-window-manager.sh
 
 ### copy and modify the dotfiles
-#./copy-dotfiles.sh
+./copy-dotfiles.sh
