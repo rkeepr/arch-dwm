@@ -6,7 +6,7 @@ static int topbar = 1;                      /* -b  option; if 0, dmenu appears a
 static const char *fonts[] = {
 	"monospace:size=10:antialias=true:autohint=true",
 	"Noto Sans Mono CJK JP:size=10:antialias=true:autohint=true",
-	"Joy Pixels:pixelsize=12:antialias=true:autohint=true",
+	"JoyPixels:pixelsize=12:antialias=true:autohint=true",
 	"Noto Color Emoji:pixelsize=12:antialias=true:autohint=true"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
