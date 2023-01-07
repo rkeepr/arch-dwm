@@ -1,3 +1,5 @@
+# M = minimal install script
+# A = aur package
 base-devel #M
 xorg-server #M
 xorg-xinit #M
@@ -14,7 +16,7 @@ gvfs #M
 gvfs-mtp
 xarchiver #M
 unzip #M
-zip #M
+zip
 unrar
 p7zip
 man-db #M
@@ -23,7 +25,7 @@ ttf-hack-nerd #M
 ttf-liberation #M
 noto-fonts
 noto-fonts-cjk #M
-noto-fonts-emoji #M
+noto-fonts-emoji
 ttf-joypixels #
 wireplumber #M
 pipewire-pulse #M
@@ -84,7 +86,7 @@ fcitx5-mozc
 fcitx5-configtool
 fcitx5-gtk
 fcitx5-qt
-gnome-keyring #M
+gnome-keyring
 seahorse
 polkit-gnome #M
 xorg-xev
@@ -95,3 +97,7 @@ xorg-xwininfo
 virtualbox
 virtualbox-host-modules-arch
 linux-headers
+librewolf-bin #A
+brave-bin #A
+downgrade #A
+shntool #A

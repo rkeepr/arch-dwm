@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ### basic install
-sudo pacman -S --needed --noconfirm $(awk '/#M/{print $1}' resources/pacman-packages)
+sudo pacman -S --needed --noconfirm $(awk '/#M/{print $1}' resources/pkg-list)
 
 ### install aur helper
 which yay && echo "aur helper already installed, skipping." || ./install-aur-helper.sh
