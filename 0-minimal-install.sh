@@ -7,6 +7,7 @@ sudo pacman -S --needed --noconfirm $(awk '/#M/{print $1}' resources/pkg-list) |
 
 ### install aur helper
 which yay && echo "AUR helper already installed, skipping." || ./install-aur-helper.sh || $quit
+
 ### suckless
 which st dwm dmenu dwmblocks && echo "Window manager already installed, skipping." || ./install-window-manager.sh || $quit
 
