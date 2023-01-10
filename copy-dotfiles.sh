@@ -19,14 +19,13 @@ cp -r resources/local/* $HOME/.local
 cp -r resources/home/. $HOME
 
 # modify these config files with current user
-current_user=$(id -u -n 1000)
 ftm="flameshot/flameshot.ini gtk-2.0/gtkrc gtk-3.0/bookmarks"
 for cf in $ftm
 do 
-	sed -i "s/REPLACE_WITH_USERNAME/$current_user/g" "$HOME/.config/$cf"
+	sed -i "s/REPLACE_WITH_USERNAME/$USER/g" "$HOME/.config/$cf"
 done
 
-# modify redshift's config file with current location
+# get current location for redshift and weather alias/script
 curl_loc="$(curl -s https://location.services.mozilla.com/v1/geolocate?key=geoclue)"
 lat=$(echo $curl_loc | awk '{print $3}' | tr -d ',')
 lon=$(echo $curl_loc | awk '{print $5}' | tr -d '},')
