@@ -8,5 +8,4 @@ sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow qBittorrent
 sudo ufw enable
-sudo systemctl enable ufw.service
-sudo systemctl start ufw.service
+sudo systemctl enable --now ufw.service
