@@ -1,105 +1,182 @@
 # M = minimal install script
 # A = aur package
+
+# suckless dependencies
 base-devel #M
 xorg-server #M
 xorg-xinit #M
 libxinerama #M
+
+# web browsers
 firefox #M
+librewolf-bin #A
+brave-bin #A
+
+# file managers
 lf #M
-neovim #M
-thunar #M
-thunar-archive-plugin #M
-thunar-volman #M
-thunar-media-tags-plugin #M
+trash-cli #M
+xclip #M
+thunar
+thunar-archive-plugin
+thunar-volman
+thunar-media-tags-plugin
 tumbler
 gvfs #M
 gvfs-mtp
-xarchiver #M
-unzip #M
+
+# archive manager
+xarchiver
+unzip
 zip
 unrar
 p7zip
+
+# editor
+neovim #M
+
+# man pages
 man-db #M
+
+# task manager
 htop #M
+lxtask
+
+# fonts
 ttf-hack-nerd #M
 ttf-liberation #M
 noto-fonts
-noto-fonts-cjk #M
+noto-fonts-cjk
 noto-fonts-emoji
-ttf-joypixels #
+ttf-joypixels
+
+# audio
 wireplumber #M
 pipewire-pulse #M
 pulsemixer #M
 pamixer #M
-flameshot
+
+# music player
 mpd
 mpc
 ncmpcpp
+
+# video players
 mpv
-yt-dlp
 vlc
 libdvdcss
-viewnior #M
+
+# video/audio download
+yt-dlp
+
+# image viewer
+viewnior
+
+# theme
 lxappearance
 qt5ct
 qt6ct
-xwallpaper #M
-nitrogen #M
+papirus-icon-theme
+materia-gtk-theme
+kvantum
+kvantum-theme-materia
+
+# wallpaper setter
+xwallpaper
+nitrogen
+
+# night light
 redshift #M
-unclutter #M
-picom #M
-papirus-icon-theme #M
-materia-gtk-theme #M
-kvantum #M
-kvantum-theme-materia #M
+
+# compositor
+picom
+
+# hotkeys
 sxhkd #M
-neofetch
-trash-cli #M
-xclip #M
-xdotool
-reflector
-numlockx #M
+
+# notifications
 dunst #M
-slock #M
-bc #M
-lxtask
+
+# screen locker
+slock
+
+# screenshot
+flameshot
+
+# terminal apps
 moreutils #M
+xcolor
+
+# calculator
+bc
+
+# shell misc
 bash-completion #M
 perl-file-mimeinfo #M
-xdg-user-dirs #M
-xcolor
+neofetch
+
+# pacman
+downgrade #A
+reflector
+
+# cue splitting
+shntool #A
 cuetools
+
+# misc
+numlockx #M
+unclutter #M
+xdg-user-dirs #M
+xorg-xkill
+xorg-xev
+xorg-xprop
+xorg-xsetroot
+xorg-xwininfo
+xdotool
+
+# terminal emulator
 rxvt-unicode
+
+# scanner
 simple-scan
 xsane
-keepassxc #M
+
+# password manager
+keepassxc
+
+# audio tag editor
 picard
+
+# image manipulation
 gimp
 imagemagick
+
+# video converter
 handbrake
+
+# torrent/p2p
 qbittorrent
 amule
+
+# office apps
 libreoffice-fresh
-atril #M
+atril
 pdfarranger
+
+# japanese input method
 fcitx5
 fcitx5-mozc
 fcitx5-configtool
 fcitx5-gtk
 fcitx5-qt
+
+# polkit
+polkit-gnome #M
+
+# keyring
 gnome-keyring
 seahorse
-polkit-gnome #M
-xorg-xev
-xorg-xkill #M
-xorg-xprop
-xorg-xsetroot
-xorg-xwininfo
+
+# virtualization
 qemu-desktop
 virt-manager
 dnsmasq
-librewolf-bin #A
-brave-bin #A
-downgrade #A
-shntool #A
-
