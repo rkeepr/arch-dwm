@@ -95,10 +95,11 @@ xorg-xkill #M
 xorg-xprop
 xorg-xsetroot
 xorg-xwininfo
-virtualbox
-virtualbox-host-modules-arch
-linux-headers
+qemu-desktop
+virt-manager
+dnsmasq
 librewolf-bin #A
 brave-bin #A
 downgrade #A
 shntool #A
+
