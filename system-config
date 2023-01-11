@@ -1,16 +1,16 @@
 #!/bin/sh
 
 #pacman
-pac_conf='/etc/pacman.conf'
-sudo sed -i '/^#Color/s/^#//' $pac_conf
-sudo sed -i 's/^#ParallelDownloads/ParallelDownloads = 5/' $pac_conf
+
+sudo sed -i -E -e '/^#ParallelDownloads/ s/[0-9]+/5/g' \
+	       -e '/^#Parallel/ s/^#//' \
+	       -e '/^#Color/ s/^#//' /etc/pacman.conf
 
 # qemu/kvm
 
-sudo systemctl enable libvirtd
+sudo sed -i -e '/^#unix_sock_group = "libvirt"/s/^#//' \ 
+	    -e '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
 
-libvirtd_conf='/etc/libvirt/libvirtd.conf'
-sudo sed -i '/^#unix_sock_group = "libvirt"/s/^#//' $libvirtd_conf
-sudo sed -i '/^#unix_sock_rw_perms = "0770"/s/^#//' $libvirtd_conf
+sudo systemctl enable libvirtd
 
 sudo usermod -aG libvirt $USER
