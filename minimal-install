@@ -1,0 +1,18 @@
+#!/bin/sh
+
+quit=$(echo "Installation failed, try again." && exit)
+
+### basic install
+sudo pacman -S --needed --noconfirm $(awk '/#M/{print $1}' resources/pkg-list) || $quit
+
+### install aur helper
+which yay && echo "AUR helper already installed, skipping." || ./install-aur-helper || $quit
+
+### suckless
+which st dwm dmenu dwmblocks && echo "Window manager already installed, skipping." || ./install-window-manager || $quit
+
+### user configuration
+./user-config
+
+### system configuration
+./system-config

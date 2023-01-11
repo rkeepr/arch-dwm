@@ -1,5 +1,10 @@
 #!/bin/sh
 
+#pacman
+pac_conf='/etc/pacman.conf'
+sudo sed -i '/^#Color/s/^#//' $pac_conf
+sudo sed -i 's/^#ParallelDownloads/ParallelDownloads = 5/' $pac_conf
+
 # qemu/kvm
 
 sudo systemctl enable libvirtd
