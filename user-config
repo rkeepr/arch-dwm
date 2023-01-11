@@ -30,7 +30,7 @@ curl_loc="$(curl -s https://location.services.mozilla.com/v1/geolocate?key=geocl
 lat=$(echo $curl_loc | awk '{print $3}' | tr -d ',')
 lon=$(echo $curl_loc | awk '{print $5}' | tr -d '},')
 
-sed -i "s/REPLACE_WITH_LATITUDE/$lat/" "$HOME/.config/redshift/redshift.conf"
-sed -i "s/REPLACE_WITH_LONGITUDE/$lon/" "$HOME/.config/redshift/redshift.conf"
+sed -i -e "s/REPLACE_WITH_LATITUDE/$lat/" \
+       -e "s/REPLACE_WITH_LONGITUDE/$lon/" "$HOME/.config/redshift/redshift.conf"
 sed -i "s/REPLACE_WITH_COORDINATES/$lat,$lon/" "$HOME/.local/bin/sb-weather.sh"
 sed -i "s/REPLACE_WITH_COORDINATES/$lat,$lon/" "$HOME/.bashrc"
