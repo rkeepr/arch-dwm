@@ -25,8 +25,8 @@ gvfs #M
 gvfs-mtp
 
 # archive manager
-xarchiver
-unzip
+xarchiver #M
+unzip #M
 zip
 unrar
 p7zip
@@ -104,7 +104,6 @@ flameshot
 
 # terminal apps
 moreutils #M
-xcolor
 
 # calculator
 bc
@@ -127,6 +126,7 @@ numlockx #M
 unclutter #M
 xdg-user-dirs #M
 xorg-xkill
+xcolor
 xorg-xev
 xorg-xprop
 xorg-xsetroot
