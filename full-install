@@ -1,18 +1,22 @@
 #!/bin/sh
 
-quit='echo "Installation failed, try again." && exit'
+quit()
+{
+	echo "Installation failed, try again."
+	exit
+}
 
 ### full install
-./install-packages || $quit
+./install-packages || quit
 
 ### install aur helper
-which yay && echo "AUR helper already installed, skipping." || ./install-aur-helper || $quit
+which yay && echo "AUR helper already installed, skipping." || ./install-aur-helper || quit
 
 ### install some packages from the aur
-./install-aur-packages || $quit
+./install-aur-packages || quit
 
 ### suckless
-which st dwm dmenu dwmblocks && echo "Window manager already installed, skipping." || ./install-window-manager || $quit
+which st dwm dmenu dwmblocks && echo "Window manager already installed, skipping." || ./install-window-manager || quit
 
 ### user configuration
 ./user-config
