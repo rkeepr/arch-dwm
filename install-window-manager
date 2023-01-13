@@ -2,7 +2,8 @@
 
 ordir=$(pwd)
 
-mkdir -p "$HOME/.local/suckless" && cd ~/.local/suckless
+mkdir -p "$HOME/.local/suckless"
+cd ~/.local/suckless
 
 # dwm and st
 for s in dwm st
