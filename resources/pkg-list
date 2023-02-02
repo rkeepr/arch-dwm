@@ -70,6 +70,9 @@ yt-dlp
 # image viewer
 viewnior
 
+# rss feed
+newsboat
+
 # theme
 lxappearance
 qt5ct
