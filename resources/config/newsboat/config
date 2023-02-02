@@ -1,0 +1,31 @@
+# reload all feeds every time you open the program
+#auto-reload yes
+
+# only show unread feeds
+show-read-feeds no
+
+# keep article that were published in the last 90 days
+keep-articles-days 90
+
+# loading of feeds in parallel
+reload-threads 10
+
+# set the defaul browser to mpv, use only with videos
+macro v set browser "mpv %u >/dev/null 2>&1 &" ; open-in-browser ; set browser "elinks %u"
+
+# colors
+color background		default  default
+color listnormal		default  default
+color listnormal_unread		cyan  default
+color listfocus 		white  color235  bold
+color listfocus_unread 		cyan  color235  bold
+color info 			green  color235
+color article 			default  default
+
+# highlights
+highlight article "^(Feed|Link):.*$" blue default bold
+highlight article "^(Title|Date|Author):.*$" red default bold
+highlight article "https?://[^ ]+" cyan default underline
+highlight article "\\[[0-9]+\\]" red default bold
+highlight article "\\[image\\ [0-9]+\\]" red default bold
+highlight feedlist "^─.*$" green default bold
