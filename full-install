@@ -7,7 +7,7 @@ error()
 }
 
 ### parallel downloads for pacman
-./configure-pacman || error
+grep "^Parallel" "/etc/pacman.conf" || ./configure-pacman
 
 ### full install
 ./install-packages || error
