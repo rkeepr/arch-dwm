@@ -6,6 +6,9 @@ error()
 	exit
 }
 
+### parallel downloads for pacman
+./configure-pacman || error
+
 ### full install
 ./install-packages || error
 
@@ -20,6 +23,3 @@ which st dwm dmenu dwmblocks && echo "Window manager already installed, skipping
 
 ### user configuration
 ./user-config
-
-### system configuration
-./system-config

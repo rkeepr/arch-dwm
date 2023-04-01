@@ -6,6 +6,9 @@ error()
 	exit
 }
 
+### parallel downloads for pacman
+./configure-pacman || error
+
 ### basic install
 sudo pacman -S --needed --noconfirm $(awk '/#M/{print $1}' resources/pkg-list) || error
 
@@ -17,6 +20,3 @@ which st dwm dmenu dwmblocks && echo "Window manager already installed, skipping
 
 ### user configuration
 ./user-config
-
-### system configuration
-./system-config
