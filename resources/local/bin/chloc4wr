@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# get current location for redshift, the sb-weather script and the weather alias
+# get current location for redshift.
 
 curl_loc="$(curl -s https://location.services.mozilla.com/v1/geolocate?key=geoclue)"
 lat=$(echo $curl_loc | awk '{print $3}' | tr -d ',')
@@ -8,5 +8,3 @@ lon=$(echo $curl_loc | awk '{print $5}' | tr -d '},')
 
 sed -i "s/^lat=.*/lat=$lat/" "$HOME/.config/redshift/redshift.conf"
 sed -i "s/^lon=.*/lon=$lon/" "$HOME/.config/redshift/redshift.conf"
-sed -i "s/^loc=.*/loc=$lat,$lon/" "$HOME/.local/bin/sb-weather.sh"
-sed -i "s|wttr.in/.*|wttr.in/$lat,$lon\"|" "$HOME/.bashrc"
