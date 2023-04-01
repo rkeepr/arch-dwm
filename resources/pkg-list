@@ -117,7 +117,6 @@ neofetch
 
 # pacman
 downgrade #A
-reflector
 
 # cue splitting
 shntool #A
