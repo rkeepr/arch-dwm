@@ -25,8 +25,11 @@ set icons true
 map . set hidden!
 map <enter> shell
 map <c-r> reload
-map M push $mkdir<space>
-map V push $nvim<space>
+map f
+map F
+map fd push $mkdir<space> # create a folder
+map ft push $nvim<space> # create a text file with nvim
+map fc push $symlinkanime # script to copy a folder(s) but creating symlinks for the files
 cmap <tab> cmd-menu-complete
 cmap <backtab> cmd-menu-complete-back
 # put lf in the backgroung (bg), type 'fg' to bring it back
