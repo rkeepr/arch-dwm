@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# intended to use with lf, it should work with the shell though.
+# the idea is simple, go to the directory with files inside, then invoke the
+# script without any arguments to automatically copy the folder recursively but
+# with the files inside being symlinks. the default destination is ~/videos.
+# you can also give it and argument indicating the folder you want to copy:
+# symlink /path/of/folder/
+
+if [ "$1" = "" ]; then
+	basedir=$(pwd)
+else
+	basedir=$1
+fi
+
+def_dest="$HOME/videos"
+
+cp -sR "$basedir" "$def_dest" ||
+	echo "If it failed, remember to use the absolute path instead \
+of the relative one."
