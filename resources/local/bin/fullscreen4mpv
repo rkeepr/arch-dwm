@@ -4,7 +4,9 @@
 
 conf=$HOME/.config/mpv/mpv.conf
 
-[ ! $(grep '^fullscreen' "$conf") ] && notify-send 'error' '"fullscreen" option not found in mpv.conf, check that the file exist and the option is not commented out' && exit
+[ ! $(grep '^fullscreen' "$conf") ] && 
+	notify-send 'error' '"fullscreen" option not found in mpv.conf, check that the file exist and the option is not commented out.' &&
+	exit
 
 if grep '^fullscreen=no' "$conf"; then
 	sed -i 's/^fullscreen=no/fullscreen=yes/' "$conf"
