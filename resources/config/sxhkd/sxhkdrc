@@ -1,16 +1,17 @@
 # wm independent hotkeys
 
 # launch programs
-super + {F1,F2,F3,F4}
-	{dmenu_run,st,$BROWSER,st -e ncmpcpp}
-ctrl + {F1,F2,F3,F4}
-	st -e lf {~/,~/downloads,~/music/,~/videos}
-
+super + {F1,F2,F3,F4,e}
+	{$BROWSER,st,st -e ncmpcpp,st -e newsboat,thunar}
+# screenshot
 Print
 	flameshot gui
-
+# task manager
 ctrl + shift + Escape
 	st -e htop
+# file manager
+ctrl + {F1,F2,F3,F4}
+	st -e lf {~/,~/downloads,~/music/,~/videos}
 
 # mpc/audacious control
 super + {F5,F6,F7,F8}
@@ -20,12 +21,9 @@ super + {F5,F6,F7,F8}
 super + shift {plus,F10,minus,F9}
 	{mpc volume +5,mpc volume +5,mpc volume -5,mpc volume -5}
 
-# volume control
-super + {plus,F10,minus,F9}
-	pamixer {-i 5,-i 5,-d 5,-d 5} && pkill -RTMIN+10 dwmblocks
-# mute
-super + F11
-	pamixer -t && pkill -RTMIN+10 dwmblocks
+# volume control (-,+, mute)
+super + {F9,F10,F11}
+	pamixer {-d 5,-i 5,-t} && pkill -RTMIN+10 dwmblocks
 # launch pulsemixer
 super + F12 
 	st -e pulsemixer
@@ -45,6 +43,7 @@ super + shift + u
 # kill window with mouse
 ctrl + alt + Escape
         xkill
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
