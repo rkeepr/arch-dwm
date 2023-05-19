@@ -5,4 +5,4 @@ home_part="$(echo $df_out | awk '{print $11}')"
 storage_part="$(echo $df_out | awk '{print $17}')"
 torrent_part="$(echo $df_out | awk '{print $23}')"
 
-echo "[ "$home_part"  "$storage_part"  "$torrent_part"]"
+echo "[ "$home_part" 󰋊 "$storage_part" 󰇚 "$torrent_part"]"

@@ -336,35 +336,34 @@ Vagrantfile             
 *.ogx   
 
 # audio formats (extensions from dircolors defaults)
-*.aac   ﱘ
-*.au    ﱘ
-*.flac  ﱘ
-*.m4a   ﱘ
-*.mid   ﱘ
-*.midi  ﱘ
-*.mka   ﱘ
-*.mp3   ﱘ
-*.mpc   ﱘ
-*.ogg   ﱘ
-*.ra    ﱘ
-*.wav   ﱘ
-*.oga   ﱘ
-*.opus  ﱘ
-*.spx   ﱘ
-*.xspf  ﱘ
+*.aac   󰝚
+*.au    󰝚
+*.flac  󰝚
+*.m4a   󰝚
+*.mid   󰝚
+*.midi  󰝚
+*.mka   󰝚
+*.mp3   󰝚
+*.mpc   󰝚
+*.ogg   󰝚
+*.ra    󰝚
+*.wav   󰝚
+*.oga   󰝚
+*.opus  󰝚
+*.spx   󰝚
+*.xspf  󰝚
 
 # other formats
 *.pdf   
 
 #folders
 ~/downloads 
-~/music     ﱘ
+~/music     󰝚
 ~/images    
-~/storage   
+~/storage   󰋊
 ~/videos    
 ~/.config   
 ~/.vim      
-~/git       
-~/torrent   
-~/guitar    
+~/git       󰊢
+~/torrent   󰇚
 ~/public    
