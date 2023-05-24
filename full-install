@@ -6,7 +6,7 @@ error()
 	exit
 }
 
-### parallel downloads for pacman
+### parallel downloads for pacman, also colors.
 grep "^Parallel" "/etc/pacman.conf" || ./configure-pacman
 
 ### full install
