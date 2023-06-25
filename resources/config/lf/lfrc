@@ -25,20 +25,21 @@ set icons true
 map . set hidden!
 map <enter> shell
 map <c-r> reload
-map f
-map F
-map fd push $mkdir<space> # create a folder
-map ft push $nvim<space> # create a text file with nvim
-map fc push $symlinkanime # script to copy a folder(s) but creating symlinks for the files
 cmap <tab> cmd-menu-complete
 cmap <backtab> cmd-menu-complete-back
+map f
+map F
 # put lf in the backgroung (bg), type 'fg' to bring it back
 map <c-z> $ kill -STOP $PPID
 # copy the selected file/directory into the clipboard (needs xclip)
 map Y $printf "%s" "$fx" | xclip -selection clipboard
+map fd push :mkdir<space> # create a folder
+map ft push $nvim<space> # create a text file with neovim
+map fv $mpv $f # open file with mpv
 map <delete> trash
 map R bulkrename
 map b $setbg $f
+map <c-l> $symlinkanime $f
 # execute current file (must be executable)
 map x $$f
 map X !$f
@@ -55,6 +56,7 @@ map gv cd ~/videos
 map gt cd ~/torrent
 map gg cd ~/git
 map gc cd ~/.config
+map gl cd ~/.local
 map gb cd ~/.local/bin
 
 # define a custom 'open' command
@@ -69,19 +71,14 @@ cmd open ${{
     esac
 }}
 
-# define a custom 'rename' command without prompt for overwrite
-# cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
-# map r push :rename<space>
+# custom mkdir so i don't need to use quotes
+cmd mkdir %IFS=" "; mkdir -- "$*"
 
 # trash-cli functionality
 cmd trash %trash-put $fx
 
 # vidir (moreutils)
-cmd rename-vidir $vidir $fx
 cmd bulkrename $vidir
-
-# luke's script to set wallpaper
-cmd setbg "$1"
 
 # extract the current file with the right command
 # (xkcd link: https://xkcd.com/1168/)
