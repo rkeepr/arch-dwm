@@ -20,6 +20,8 @@ set scrolloff 10
 set drawbox
 # enable icons (nerdfonts)
 set icons true
+# preview script
+set previewer ~/.config/lf/pv.sh
 
 ### bindings
 map . set hidden!
