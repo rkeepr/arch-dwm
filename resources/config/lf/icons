@@ -73,13 +73,6 @@ fi             # FILE
 *.toml          
 *.bat           
 *.mk            
-*.jpg           
-*.jpeg          
-*.bmp           
-*.png           
-*.webp          
-*.gif           
-*.ico           
 *.twig          
 *.cpp           
 *.c++           
@@ -291,6 +284,8 @@ Vagrantfile             
 *.mjpeg 
 *.gif   
 *.bmp   
+*.ico   
+*.webp  
 *.pbm   
 *.pgm   
 *.ppm   
