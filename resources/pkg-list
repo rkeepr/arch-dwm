@@ -106,8 +106,15 @@ flameshot
 
 # terminal apps
 moreutils #M
+
+# output code with syntax highlighting (previews in lf)
 bat
+
+# show media files information (previews in lf)
 mediainfo
+
+# manages and gives information on file archives (previews in lf)
+atool
 
 # calculator
 bc
