@@ -30,8 +30,6 @@ unzip #M
 zip
 unrar
 p7zip
-# manages and gives information on file archives (previews in lf)
-atool
 
 # editor
 neovim #M
