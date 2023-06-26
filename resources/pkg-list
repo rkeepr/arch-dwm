@@ -106,6 +106,8 @@ flameshot
 
 # terminal apps
 moreutils #M
+bat
+mediainfo
 
 # calculator
 bc
