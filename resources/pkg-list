@@ -30,9 +30,14 @@ unzip #M
 zip
 unrar
 p7zip
+# manages and gives information on file archives (previews in lf)
+atool
 
 # editor
 neovim #M
+
+# output code with syntax highlighting (previews in lf)
+bat
 
 # man pages
 man-db #M
@@ -69,6 +74,9 @@ yt-dlp
 
 # image viewer
 viewnior
+
+# show media files information (previews in lf)
+mediainfo
 
 # rss feed
 newsboat
@@ -107,14 +115,6 @@ flameshot
 # terminal apps
 moreutils #M
 
-# output code with syntax highlighting (previews in lf)
-bat
-
-# show media files information (previews in lf)
-mediainfo
-
-# manages and gives information on file archives (previews in lf)
-atool
 
 # calculator
 bc
