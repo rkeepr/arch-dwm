@@ -3,16 +3,18 @@
 # Script to convert images from png to jpg using convert (ImageMagick).
 # converted images will have the same name with the added suffix "-conimg":
 # img.png --> img-conimg.jpg
-# if pointed to a directory, it will convert all the (png) images inside it.
+# if pointed to a directory, it will convert all the (png) images inside it (1
+# directory deep: "-maxdepth 1")
 # is intended to be used with images equal or larger than 4k as it will modify
 # the resolution to 4k.
 
 itc="$(readlink -f "$1")"
 
 case "$(file --mime-type -b "$itc")" in
-	*.png ) convert "$itc" -resize 3840 "${itc%.*}"-conimg.jpg ;;
-	inode/directory ) find "$itc" -maxdepth 1 -iname "*.png" -type f \
-				      -exec sh -c 'convert "$0" -resize 3840 \
-				      "${0%.*}"-conimg.jpg' "{}" \; ;;
+	image/png)
+		convert "$itc" -resize 3840 "${itc%.*}"-conimg.jpg ;;
+	inode/directory)
+		find "$itc" -maxdepth 1 -iname "*.png" -type f -exec sh -c\
+			'convert "$0" -resize 3840 "${0%.*}"-conimg.jpg' "{}" \; ;;
 	*) echo "this isn't a png file" ;;
 esac
