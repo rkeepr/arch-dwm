@@ -1,8 +1,13 @@
 #!/bin/sh
 
-# Script to copy directories with files inside but the files are symbolic
-# links. Default destination is ~/videos but you can specifiy a different
-# directory: symlinkani "file/to/copy" "destination"
+# Script to copy directories with files inside but the files are symbolic links.
+# Default destination is ~/videos but you can specifiy a different directory:
+#
+#		symlinkani "directory/to/copy" "downloads"
+# 
+# it will also accept a single file to copy:
+# 
+# 		symlinkani "file/to/copy.txt"
 
 def_dest="$HOME/videos"
 
