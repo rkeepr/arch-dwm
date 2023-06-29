@@ -94,8 +94,8 @@ map fd push :mkdir<space>
 map ft push $nvim<space> 
 # open file with mpv
 map fv $mpv $f 
-# symlink to "videos"
-map fl $symlinkanime $f
+# symlinkani script
+map fl $symlinkani $f
 # script to convert png to jpg
 map fc $conimg $f
 # trash-cli
