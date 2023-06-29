@@ -1,8 +1,7 @@
 killall ssh-agent
 eval $(ssh-agent)
 xrandr --dpi 96
-#setbg &
-nitrogen --set-zoom-fill images/wallpapers --random &
+ranwall &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 autostart="dwmblocks numlockx redshift unclutter sxhkd picom mpd flameshot qbittorrent"
