@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Script to copy directories with files inside but the files are symbolic
+# links. Default destination is ~/videos but you can specifiy a different
+# directory: symlinkani "file/to/copy" "destination"
+
+def_dest="$HOME/videos"
+
+if [ -n "$2" ]; then
+	base_dir="$(readlink -f "$1")"
+	dest_dir="$(readlink -f "$2")"
+	cp -sR "$base_dir" "$dest_dir"
+elif [ -n "$1" ]; then
+	base_dir="$(readlink -f "$1")"
+	cp -sR "$base_dir" "$def_dest"
+elif [ -z "$1" ]; then
+	base_dir="$(pwd)"
+	cp -sR "$base_dir" "$def_dest"
+fi
