@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# - When given an image file as an argument, set that file as a wallpaper.
+# - If you give it a directory with images inside, it will pick a random image
+#   and set it as a wallpaper; it will also remember the files inside the 
+#   directory and give you a new wallpaper every time you run the script.
+
+locfile="$HOME/.local/share/ranwall"
+
+[ -n "$1" ] &&
+case "$(file --mime-type --brief "$1")" in
+	image/*)
+		readlink -f "$1" > "$locfile"
+		xwallpaper --zoom "$1"
+		notify-send -i "$1" "ranwall" "new wallpaper set"
+		exit
+		;;
+	inode/directory)
+		tempfile=/tmp/ranwall
+		find "$(readlink -f "$1")" -type f -iregex '.*.\(jpeg\|jpg\|png\|webp\|gif\)' > "$tempfile"
+		lc="$(wc -l < "$tempfile")"
+		if [ $lc -gt 0 ]; then
+			randomimg="$(shuf -n1 "$tempfile")"
+			xwallpaper --zoom "$randomimg"
+			mv "$tempfile" "$locfile"
+			notify-send -i "$randomimg" "ranwall" "new directory linked"
+		elif [ $lc = 0 ]; then
+			notify-send "ranwall" "this directory doesn't have any valid images inside it."
+		fi
+		exit
+		;;
+	*)
+		notify-send "error" "choose an image file or a directory with images inside it."
+		exit
+		;;
+esac
+
+lc="$(wc -l < "$locfile")"
+if [ "$lc" = "1" ]; then
+       xwallpaper --zoom "$(cat "$locfile")" ||
+	notify-send "error" "select an image/folder for a wallpaper"
+elif [ "$lc" -gt "1" ]; then
+       xwallpaper --zoom "$(shuf -n1 "$locfile")" ||
+	notify-send "error" "select an image/folder for a wallpaper"
+else
+       notify-send "ranwall" "select an image/folder to set a wallpaper"
+fi
