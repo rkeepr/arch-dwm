@@ -23,67 +23,19 @@ set icons true
 # preview script
 set previewer ~/.config/lf/pv.sh
 
-### bindings
-map . set hidden!
-map <enter> shell
-map <c-r> reload
-cmap <tab> cmd-menu-complete
-cmap <backtab> cmd-menu-complete-back
-# unbind keys
-map f
-map F
-# put lf in the backgroung (bg), type 'fg' to bring it back
-map <c-z> $ kill -STOP $PPID
-# copy the selected file/directory into the clipboard (needs xclip)
-map Y $printf "%s" "$fx" | xclip -selection clipboard
-# create a folder
-map fd push :mkdir<space> 
-# create a text file with neovim
-map ft push $nvim<space> 
-# open file with mpv
-map fv $mpv $f 
-# symlink to "videos"
-map fl $symlinkanime $f
-# script to convert png to jpg
-map fc $conimg $f
-# trash-cli
-map <delete> trash
-# bulk rename
-map R $vidir 
-# luke smith wallpaper script
-map b $setbg $f 
-# execute current file (must be executable)
-map x $$f
-map X !$f
-# dedicated keys for file opener actions (needs 'mimeopen')
-map o &mimeopen $f
-map O $mimeopen --ask $f
-# quickly move between directories
-map gD cd ~/documents
-map gd cd ~/downloads
-map gi cd ~/images
-map gm cd ~/music
-map gs cd ~/storage
-map gv cd ~/videos
-map gt cd ~/torrent
-map gg cd ~/git
-map gc cd ~/.config
-map gl cd ~/.local
-map gb cd ~/.local/bin
+### functions
 
-### custom functions
-
-# define a custom 'open' command
-# This command is called when current file is not a directory. You may want to
-# use either file extensions and/or mime types here. Below uses an editor for
-# text files and a file opener for the rest.
+# command to open files
 cmd open ${{
     test -L $f && f=$(readlink -f $f)
     case $(file --mime-type $f -b) in
-        text/*) $EDITOR $fx;;
+        text/*|application/json) $EDITOR $fx;;
         *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
     esac
 }}
+
+# wallpaper script
+cmd ranwall "$1"
 
 # custom mkdir so i don't need to use quotes
 cmd mkdir %IFS=" "; mkdir -- "$*"
@@ -122,3 +74,51 @@ cmd zip ${{
     zip -r $1.zip $1
     rm -rf $1
 }}
+
+### bindings
+map . set hidden!
+map <enter> shell
+map <c-r> reload
+cmap <tab> cmd-menu-complete
+cmap <backtab> cmd-menu-complete-back
+# unbind keys
+map f
+map F
+# put lf in the backgroung (bg), type 'fg' to bring it back
+map <c-z> $ kill -STOP $PPID
+# copy the selected file/directory into the clipboard (needs xclip)
+map Y $printf "%s" "$fx" | xclip -selection clipboard
+# create a folder
+map fd push :mkdir<space> 
+# create a text file with neovim
+map ft push $nvim<space> 
+# open file with mpv
+map fv $mpv $f 
+# symlink to "videos"
+map fl $symlinkanime $f
+# script to convert png to jpg
+map fc $conimg $f
+# trash-cli
+map <delete> trash
+# bulk rename
+map R $vidir 
+# wallpaper script
+map b $ranwall $f 
+# execute current file (must be executable)
+map x $$f
+map X !$f
+# dedicated keys for file opener actions (needs 'mimeopen')
+map o &mimeopen $f
+map O $mimeopen --ask $f
+# quickly move between directories
+map gD cd ~/documents
+map gd cd ~/downloads
+map gi cd ~/images
+map gm cd ~/music
+map gs cd ~/storage
+map gv cd ~/videos
+map gt cd ~/torrent
+map gg cd ~/git
+map gc cd ~/.config
+map gl cd ~/.local
+map gb cd ~/.local/bin
