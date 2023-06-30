@@ -8,7 +8,7 @@
 locfile="$HOME/.local/share/ranwall"
 
 [ -n "$1" ] &&
-case "$(file --mime-type --brief "$1")" in
+case "$(file --mime-type --brief --dereference "$1")" in
 	image/*)
 		readlink -f "$1" > "$locfile"
 		xwallpaper --zoom "$1"
