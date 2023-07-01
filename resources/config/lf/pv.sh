@@ -1,7 +1,7 @@
 #!/bin/sh
 
 case "$(file --dereference --brief --mime-type "$1")" in
-	image/*|video/*|audio/*) mediainfo "$1" ;;
+	image/*|video/*|audio/*|application/octet-stream) mediainfo "$1" ;;
 	text/*|*/xml|application/json) bat -f "$1" ;;
 	application/pdf) pdftotext "$1" - ;;
 	application/gzip) tar tf "$1" ;;
