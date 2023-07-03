@@ -30,6 +30,8 @@ cmd open ${{
     test -L $f && f=$(readlink -f $f)
     case $(file --mime-type $f -b) in
         text/*|application/json) $EDITOR $fx;;
+	video/*) setsid -f mpv $f >/dev/null 2>&1;;
+	audio/*) setsid -f mpv $f --force-window --no-terminal;;
         *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
     esac
 }}
