@@ -35,13 +35,4 @@ case "$(file --mime-type --brief --dereference "$1")" in
 		;;
 esac
 
-lc="$(wc -l < "$locfile")"
-if [ "$lc" = "1" ]; then
-       xwallpaper --zoom "$(cat "$locfile")" ||
-	notify-send "error" "select an image/folder for a wallpaper"
-elif [ "$lc" -gt "1" ]; then
-       xwallpaper --zoom "$(shuf -n1 "$locfile")" ||
-	notify-send "error" "select an image/folder for a wallpaper"
-else
-       notify-send "ranwall" "select an image/folder to set a wallpaper"
-fi
+xwallpaper --zoom "$(shuf -n1 "$locfile")" || notify-send "error" "select an image/folder for a wallpaper"
