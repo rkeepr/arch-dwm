@@ -3,7 +3,8 @@
 # qemu/kvm
 
 sudo sed -i -e '/^#unix_sock_group = "libvirt"/s/^#//' \
-	    -e '/^#unix_sock_rw_perms = "0770"/s/^#//' /etc/libvirt/libvirtd.conf
+	    -e '/^#unix_sock_rw_perms = "0770"/s/^#//' \
+            /etc/libvirt/libvirtd.conf
 
 sudo systemctl enable libvirtd
 
