@@ -21,3 +21,10 @@ set splitbelow splitright
 
 " spell checking
 set spelllang=en,es,cjk
+
+" auto-indent to 4 spaces
+set shiftwidth=4
+" tab key inserts 4 spaces (insert mode)
+set softtabstop=4
+" insert spaces instead of tab characters (insert mode)
+set expandtab
