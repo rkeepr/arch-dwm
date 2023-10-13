@@ -1,3 +1,5 @@
+#!/bin/sh
+
 killall ssh-agent
 eval $(ssh-agent)
 xrandr --dpi 96
