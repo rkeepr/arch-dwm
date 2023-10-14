@@ -35,7 +35,7 @@ alias \
     bc="bc -ql" \
     grep="grep --color=auto" \
     diff="diff --color=auto" \
-    ffmpeg=" -hide_banner" \
+    ffmpeg="ffmpeg -hide_banner" \
     ip="ip -color=auto" \
     crypto="curl rate.sx" \
     ytv="yt-dlp --embed-metadata" \
