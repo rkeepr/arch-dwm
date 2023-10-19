@@ -32,6 +32,7 @@ p7zip
 
 # editor
 neovim #M
+mousepad
 
 # output code with syntax highlighting (previews in lf)
 bat
