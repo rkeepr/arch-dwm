@@ -9,7 +9,6 @@ libxinerama #M
 
 # web browsers
 firefox #M
-librewolf-bin #A
 brave-bin #A
 
 # file managers
