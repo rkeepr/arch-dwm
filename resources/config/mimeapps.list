@@ -1,4 +1,5 @@
 [Default Applications]
+application/octet-stream=mpv.desktop
 application/pdf=atril.desktop
 application/x-cue=mpv.desktop
 audio/flac=mpv.desktop
@@ -6,13 +7,15 @@ audio/mp4=mpv.desktop
 audio/mpeg=mpv.desktop
 audio/x-opus+ogg=mpv.desktop
 audio/x-wav=mpv.desktop
+image/gif=viewnior.desktop;
 image/jpeg=viewnior.desktop
 image/png=viewnior.desktop
 text/html=nvim.desktop
-text/plain=nvim.desktop
+text/plain=org.xfce.mousepad.desktop
 video/mp2t=mpv.desktop
 video/mp4=mpv.desktop
 video/mpeg=mpv.desktop
 video/quicktime=mpv.desktop
 video/x-matroska=mpv.desktop
+video/x-ms-wmv=mpv.desktop
 video/x-ogm+ogg=mpv.desktop
