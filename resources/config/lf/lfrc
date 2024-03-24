@@ -95,7 +95,7 @@ map fd push :mkdir<space>
 # create a text file with neovim
 map ft push $nvim<space> 
 # open file with mpv
-map fv $mpv $f 
+map fv $setsid -f mpv $f 
 # symlinkani script
 map fl $symlinkani $f
 # script to convert png to jpg
