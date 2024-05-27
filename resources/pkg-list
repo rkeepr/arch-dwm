@@ -119,7 +119,7 @@ bc
 # shell misc
 bash-completion #M
 perl-file-mimeinfo #M
-neofetch
+fastfetch
 
 # pacman
 downgrade #A
