@@ -73,6 +73,11 @@ yt-dlp
 # image viewer
 viewnior
 
+# vidya
+retroarch
+lutris
+tochd #A
+
 # show media files information (previews in lf)
 mediainfo
 
@@ -144,7 +149,6 @@ xdotool
 rxvt-unicode
 
 # scanner
-simple-scan
 xsane
 
 # password manager
@@ -166,7 +170,8 @@ amule
 
 # office apps
 libreoffice-fresh
-atril
+zathura
+zathura-cb zathura-pdf-poppler
 pdfarranger
 
 # japanese input method
