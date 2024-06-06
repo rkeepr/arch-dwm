@@ -37,11 +37,14 @@ alias \
     diff="diff --color=auto" \
     ffmpeg="ffmpeg -hide_banner" \
     ip="ip -color=auto" \
-    crypto="curl rate.sx" \
-    ytv="yt-dlp --embed-metadata" \
+    yt="yt-dlp --embed-metadata" \
+    yt1080max="yt-dlp -f "bv[height=1080]+ba" --embed-metadata" \
     yta="yt-dlp -x --embed-metadata --embed-thumbnail" \
-    ytf="yt-dlp -F" \
-    crypto="curl rate.sx"
+    ytlf="yt-dlp -F" \
+    btcp="curl rate.sx/btc@90d" \
+    ethp="curl rate.sx/eth@90d" \
+    xmrp="curl rate.sx/xmr@90d" \
+    cpw="curl rate.sx"
 
 # Default programs
 export EDITOR=nvim
