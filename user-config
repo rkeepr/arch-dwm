@@ -11,7 +11,7 @@ done
 sd='/mnt/storage'
 td='/mnt/torrent'
 [ -d $sd ] && ln -s $sd $sd/music $HOME
-[ -d $td ] && ln -s $td $HOME
+[ -d $td ] && ln -s $td $HOME/downloads
 
 # copy the dotfiles.
 cp -r resources/config/* $HOME/.config
