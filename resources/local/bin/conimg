@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Script to convert images from png to jpg using convert (ImageMagick).
+# Script to convert images from png to jpg using magick (ImageMagick).
 # converted images will have the same name with the added suffix "-conimg":
 # img.png --> img-conimg.jpg
 # if pointed to a directory, it will convert all the (png) images inside it (1
@@ -12,9 +12,9 @@ itc="$(readlink -f "$1")"
 
 case "$(file --mime-type -b "$itc")" in
 	image/png)
-		convert "$itc" -resize 3840 "${itc%.*}"-conimg.jpg ;;
+		magick "$itc" -resize 3840 "${itc%.*}"-conimg.jpg ;;
 	inode/directory)
 		find "$itc" -maxdepth 1 -iname "*.png" -type f -exec sh -c\
-			'convert "$0" -resize 3840 "${0%.*}"-conimg.jpg' "{}" \; ;;
-	*) echo "this isn't a png file" ;;
+			'magick "$0" -resize 3840 "${0%.*}"-conimg.jpg' "{}" \; ;;
+	*) echo "this isn't a png file" && exit 1 ;;
 esac
