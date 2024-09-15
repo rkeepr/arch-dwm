@@ -119,7 +119,7 @@ map gi cd ~/images
 map gm cd ~/music
 map gs cd ~/storage
 map gv cd ~/videos
-map gt cd ~/torrent
+map gt cd ~/downloads/torrent
 map gg cd ~/git
 map gc cd ~/.config
 map gl cd ~/.local
