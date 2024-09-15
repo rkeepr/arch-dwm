@@ -148,7 +148,7 @@ xdotool
 rxvt-unicode
 
 # scanner
-xsane
+xsane #A
 
 # password manager
 keepassxc
