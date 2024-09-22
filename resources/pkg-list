@@ -170,7 +170,7 @@ amule
 # office apps
 libreoffice-fresh
 zathura
-zathura-cb zathura-pdf-poppler
+zathura-pdf-mupdf
 pdfarranger
 
 # japanese input method
