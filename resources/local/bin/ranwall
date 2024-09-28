@@ -10,7 +10,7 @@ locfile="$HOME/.local/share/ranwall"
 [ -n "$1" ] &&
 case "$(file --mime-type --brief --dereference "$1")" in
 	image/png|image/jpeg)
-		xwallpaper --zoom "$1" || notify-send "ranwall" "xwallpaper can't use this file" && exit
+		xwallpaper --zoom "$1"
 		readlink -f "$1" > "$locfile"
 		notify-send -i "$1" "ranwall" "new wallpaper set"
 		exit
