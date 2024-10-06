@@ -91,6 +91,8 @@ map fv $setsid -f mpv $f
 map fl $symlinkani $f
 # script to convert png to jpg
 map fc $conimg $f
+# script to remove audio from video files
+map fra $rmaud $f
 # trash-cli
 map <delete> trash
 # bulk rename
