@@ -1,0 +1,64 @@
+#!/bin/sh
+
+# script to convert an audio/video file to ogg or m4a.
+
+codec="libopus"
+ext="ogg"
+dir_depth="-maxdepth 2"
+ow="-n"
+
+convert() {
+    ffmpeg -hide_banner $ow -i "$input" -vn -c:a $codec "$output.$ext"
+}
+
+help_msg() {
+printf "Usage:
+  conaud [file]
+  conaud [options] [file]
+  conaud [options] [file] [destination]
+
+By default the file(s) will be converted to ogg.
+
+Options:
+  -a, --aac
+    Convert to aac.
+  -o, --overwrite
+    Overwrite existing file(s).
+  -h, --help
+    Display this help and exit.\n"
+}
+
+[ -z "$1" ] && help_msg && exit
+
+for i in "$@"; do
+    case $i in
+        -h|--help)
+            help_msg
+            exit ;;
+        -a|--aac)
+            codec="aac"
+            ext="m4a"
+            shift ;;
+        -o|--overwrite)
+            ow="-y"
+            shift ;;
+    esac
+done
+
+case "$(file --mime-type --brief "$1")" in
+    audio/*|video/*)
+        input="$1"
+        if [ -z $2 ]; then
+            output="${input%.*}"
+        elif [ $2 = . ]; then
+            name="$(basename "$1")"
+            output="$(pwd)/${name%.*}"
+        else
+            name="$(basename "$1")"
+            output="$(readlink -f "$2")/${name%.*}"
+        fi
+        convert
+        exit ;;
+    *) printf "not a valid file, audio/video files only.\n"
+        exit 1 ;;
+esac
