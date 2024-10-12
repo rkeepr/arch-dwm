@@ -4,7 +4,6 @@
 
 codec="libopus"
 ext="ogg"
-dir_depth="-maxdepth 2"
 ow="-n"
 
 convert() {
