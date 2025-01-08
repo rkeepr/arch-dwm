@@ -2,6 +2,6 @@
 
 # pacman
 
-sudo sed -i -E -e '/^#ParallelDownloads/ s/[0-9]+/5/g' \
+sudo sed -i -E -e '/^#ParallelDownloads/ s/[0-9]+/10/g' \
 	       -e '/^#Parallel/ s/^#//' \
 	       -e '/^#Color/ s/^#//' /etc/pacman.conf
