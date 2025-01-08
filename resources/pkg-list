@@ -28,7 +28,7 @@ xarchiver #M
 unzip #M
 zip
 unrar
-p7zip
+7zip
 
 # editor
 neovim #M
