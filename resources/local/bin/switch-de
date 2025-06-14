@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Switch desktop enviroment from dwm to xfce4 and vice versa
+
+set -x
+
+case "$(grep "^#exec*" $HOME/.xinitrc)" in
+    "#exec dwm" )
+        #echo 'xfce is the DE'
+        sed -i -e 's/^exec startxfce4/#exec startxfce4/' -e 's/^#exec dwm/exec dwm/' $HOME/.xinitrc
+        notify-send 'switch-de' 'change desktop enviroment to dwm'
+        ;;
+    "#exec startxfce4" )
+        #echo 'dwm is the DE'
+        sed -i -e 's/^exec dwm/#exec dwm/' -e 's/^#exec startxfce4/exec startxfce4/' $HOME/.xinitrc
+        notify-send 'switch-de' 'change desktop enviroment to xfce4'
+        ;;
+esac
