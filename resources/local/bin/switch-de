@@ -2,8 +2,6 @@
 
 # Switch desktop enviroment from dwm to xfce4 and vice versa
 
-set -x
-
 case "$(grep "^#exec*" $HOME/.xinitrc)" in
     "#exec dwm" )
         #echo 'xfce is the DE'
