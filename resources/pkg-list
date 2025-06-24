@@ -73,8 +73,12 @@ yt-dlp
 viewnior
 
 # vidya
+wine-staging
+winetricks
 retroarch
 lutris
+steam
+protontricks
 tochd #A
 
 # show media files information (previews in lf)
