@@ -152,7 +152,7 @@ xdotool
 rxvt-unicode
 
 # scanner
-xsane #A
+simple-scan
 
 # password manager
 keepassxc
