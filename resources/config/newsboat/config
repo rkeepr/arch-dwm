@@ -16,9 +16,9 @@ macro v set browser "mpv %u >/dev/null 2>&1 &" ; open-in-browser ; set browser "
 # colors
 color background		default  default
 color listnormal		default  default
-color listnormal_unread		cyan  default
+color listnormal_unread		green  default
 color listfocus 		white  color235  bold
-color listfocus_unread 		cyan  color235  bold
+color listfocus_unread 		green  color235  bold
 color info 			green  color235
 color article 			default  default
 
