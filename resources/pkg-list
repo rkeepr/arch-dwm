@@ -66,8 +66,9 @@ mpv
 vlc
 libdvdcss
 
-# video/audio download
+# media download
 yt-dlp
+gallery-dl-bin #A
 
 # image viewer
 viewnior
