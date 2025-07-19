@@ -111,6 +111,7 @@ map gd cd ~/downloads
 map gi cd ~/images
 map gm cd ~/music
 map gs cd ~/storage
+map g2 cd ~/storage2
 map gv cd ~/videos
 map gt cd ~/downloads/torrent
 map gg cd ~/git
