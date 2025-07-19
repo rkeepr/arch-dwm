@@ -352,12 +352,12 @@ Vagrantfile             
 *.pdf   
 
 #folders
-~/downloads 
-~/music     󰝚
-~/images    
-~/storage   󰋊
-~/videos    󰨜
-~/.config   
-~/git       󰊢
-~/torrent   󰇚
-~/public    
+~/downloads  
+~/music      󰝚
+~/images     
+~/storage    󰋊
+~/storage2   󰋊
+~/videos     󰨜
+~/.config    
+~/git        󰊢
+~/public     
