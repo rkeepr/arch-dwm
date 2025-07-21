@@ -5,6 +5,7 @@ eval $(ssh-agent)
 xrandr --dpi 96
 ranwall &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+steam -silent &
 
 autostart="dunst dwmblocks numlockx redshift unclutter sxhkd picom mpd flameshot fcitx5"
 
