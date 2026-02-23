@@ -69,7 +69,7 @@ libdvdcss
 
 # media download
 yt-dlp
-gallery-dl-bin #A
+gallery-dl #A
 
 # image viewer
 viewnior
