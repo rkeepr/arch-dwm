@@ -23,6 +23,8 @@ tumbler
 ffmpegthumbnailer 
 gvfs #M
 gvfs-mtp
+# for mounting ISO's
+gnome-disk-utility
 
 # archive manager
 xarchiver #M
@@ -88,6 +90,9 @@ mediainfo
 
 # rss feed
 newsboat
+
+# transcribe audio with AI
+vibe-bin #A
 
 # theme
 lxappearance
